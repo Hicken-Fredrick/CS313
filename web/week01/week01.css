@@ -1,0 +1,25 @@
+h1 {
+  color: dimgray;
+  font-weight: bold;
+}
+
+#first {
+  color: orange;
+}
+#first:hover {
+  font-weight: bold;
+}
+
+#second {
+  color: darkblue;
+}
+#second:hover {
+  font-weight: bold;
+}
+
+#third {
+  color: darkred;
+}
+#third:hover {
+  font-weight: bold;
+}
