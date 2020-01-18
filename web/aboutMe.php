@@ -7,8 +7,10 @@
     <meta name="description" content="About Me Page">
 </head>
 <body>
-  <h1>About Me</h1>
-  <p></p>
+  <header>
+    <h1>Fred Hicken - CS313</h1>
+    <h2>About Me</h2>
+  </header>
 </body>
 <footer>
   <?php include 'footer.php'; ?> <!-- Includes Basic Footer Information -->

@@ -6,6 +6,72 @@ body {
     display: flex;
     min-height: 100vh; 
     flex-direction: column;
+    background-color: #121314;
+}
+header {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color: #1c1d1e;
+    color: #cbcbcb;
+    height: 100px;
+    justify-content: center;
+    margin-bottom: 5px;
+    padding-bottom: 125px;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #001221;
+    margin-bottom: 10px;
+    overflow:auto;
+    border: 1px solid #d39b42;
+}
+#primaryNav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+}
+nav ul li {
+  margin: 3px;
+}
+nav ul li a {
+    display: inline-flex;
+    background-color: #113554;
+    border: 1px solid #C49268;
+    color: #C49268;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.0vw;
+    padding: 12px;
+    margin: 1px;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+}
+nav ul li.active a {
+    color: lightgray;
+    background-color: #185080;
+}
+nav ul li a:checked, nav ul li a:visited {
+    color: lightgray;
+}
+nav ul li a:hover {
+    background-color: #0b5494;
+    color: #C49268;
+}
+body {
+    color: #c5c5c5;
 }
 footer {
     display: inline-flex;
@@ -17,4 +83,6 @@ footer {
     padding-top: 5px;
     margin-top: auto;
     flex-shrink: 0;
+    background-color: #001324;
+    color: #C49268;
 }
