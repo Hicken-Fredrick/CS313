@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS313 | Hello World | Fred Hicken</title>
-    <meta name="author" content="Fred Hicken">
-    <meta name="description" content="Hello World!">
+    <?php include 'header.php'; ?>
+    <title>CS313 | Index | Fred Hicken</title>
+    <meta name="description" content="Index Page">
 </head>
 <body>
   <h1 style="color:orange;text-align:center;">HELLO WORLD!</h1>
