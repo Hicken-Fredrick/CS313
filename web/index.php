@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <?php include 'header.php'; ?> <!-- Includes Meta Data for Charset, Viewport, and Author -->
-    <link href="index.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
     <title>CS313 | Index | Fred Hicken</title>
     <meta name="description" content="Index Page">
 </head>
@@ -32,8 +32,8 @@
     </ul>
   </ul>
   
+  <footer>
+    <?php include 'footer.php'; ?> <!-- Includes Basic Footer Information -->
+  </footer>
 </body>
-<footer>
-<?php include 'footer.php'; ?> <!-- Includes Basic Footer Information -->
-</footer>
 </html>
