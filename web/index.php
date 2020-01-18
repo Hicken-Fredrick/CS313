@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <?php include 'header.php'; ?>
+    <?php include 'header.php'; ?> <!-- Includes Meta Data for Charset, Viewport, and Author -->
+    <link href="index.css" rel="stylesheet">
     <title>CS313 | Index | Fred Hicken</title>
     <meta name="description" content="Index Page">
 </head>
 <body>
   <h1>Index Page</h1>
-  <h2><a href="#">Personal Information</a></h2>
+  <h2><a href="aboutMe.html">Personal Information</a></h2>
   <ul>
     <li>Assignments</li>
     <ul>
@@ -21,6 +22,6 @@
   </ul>
 </body>
 <footer>
-<?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?> <!-- Includes Basic Footer Information -->
 </footer>
 </html>
