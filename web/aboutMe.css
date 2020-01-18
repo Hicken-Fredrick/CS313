@@ -1,4 +1,14 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
 
+body {
+    display: flex;
+    min-height: 100vh; 
+    flex-direction: column;
+    background-color: #9D6A40;
+}
 
 footer {
     display: inline-flex;
