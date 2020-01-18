@@ -10,10 +10,8 @@
 <body>
   <h1 style="color:orange;text-align:center;">HELLO WORLD!</h1>
 </body>
+<footer>
+<?php include 'footer.php'; ?>
+</footer>
 </html>
 
-<?php
-
-  phpinfo();
-
-?>
