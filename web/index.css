@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+body {
+    display: flex;
+    min-height: 100vh; 
+    flex-direction: column;
+    background-color: #9D6A40;
+}
+header {
+    display: inline-flex;
+    width: 100%;
+    background-color: #9D6A40;
+    height: 100px;
+    justify-content: center;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #341800;
+    margin-bottom: 10px;
+    overflow:auto;
+}
+#primaryNav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav button {
+    margin: 5px;
+    width: 33%;
+    background-color: #341800;
+    color: #C49268;
+    border: 2px solid #C49268;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul.hide {
+    display: none;
+}
+
+nav ul li a {
+    display: inline-flex;
+    background-color: #341800;
+    border: 1px solid #C49268;
+    color: #C49268;
+    text-decoration: none;
+    text-align: center;
+    font-size: 3.0vw;
+    padding: 12px;
+    margin: 3px;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+}
+nav ul li.active a {
+    color: #C49268;
+    background-color: #001F1F;
+}
+nav ul li a:checked, nav ul li a:visited {
+    color: #C49268;
+}
+nav ul li a:hover {
+    background-color: #063535;
+    color: #C49268;
+}
+footer {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    font-size: .7rem;
+    padding-top: 5px;
+    margin-top: auto;
+    flex-shrink: 0;
+}

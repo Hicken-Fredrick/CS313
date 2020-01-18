@@ -7,8 +7,14 @@
     <meta name="description" content="Index Page">
 </head>
 <body>
-  <h1>Index Page</h1>
-  <h2><a href="aboutMe.html">Personal Information</a></h2>
+  <h1>Fred Hicken - CS313</h1>
+  <h2>Everything We've Been Working On</h2>
+  <nav>
+    <ul id="primaryNav">
+        <li class="active"><a href="index.php">Index</a></li>
+        <li><a href="aboutMe.php">About Me</a></li>
+    </ul>
+</nav>
   <ul>
     <li>Assignments</li>
     <ul>
