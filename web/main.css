@@ -52,7 +52,7 @@ nav ul li a {
     color: #C49268;
     text-decoration: none;
     text-align: center;
-    font-size: 1.0vw;
+    font-size: 19px;
     padding: 12px;
     margin: 1px;
     width: 100%;
@@ -67,14 +67,17 @@ nav ul li a:checked, nav ul li a:visited {
     color: lightgray;
 }
 nav ul li a:hover {
-    background-color: #0b5494;
-    color: #C49268;
+    background-color: #1a588e;
+    color: white;
+    border: 1px solid gold;
 }
 h1 {
   margin 0;
   padding 0;
+  font-size: 2.7rem;
 }
 h2 {
+  font-size: 1.2rem;
   margin: 0;
   padding: 0;
 }
@@ -84,10 +87,52 @@ footer {
     width: 100%;
     text-align: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: .7rem;
     padding-top: 5px;
     margin-top: auto;
     flex-shrink: 0;
     background-color: #001324;
     color: #C49268;
+}
+/*index specifics*/
+#index ul {
+  font-size: 1.2vw; 
+}
+/*aboutMe specifics*/
+#aboutMe div {
+  text-align: center;
+  width: 100%;
+  display:grid;
+  grid-template-areas: 
+    'tech tech image image image'
+    'techInfo techInfo image image image'
+    'image2 image2 image2 games games'
+    'image2 image2 image2 gamesInfo gamesInfo'
+    'books books image3 image3 image3'
+    'booksInfo booksInfo image3 image3 image3';
+  grid-gap: 5px;
+  grid-row-gap: 15px;
+  font-size: 20px;
+  border: 1px solid lightgray;
+}
+
+#aboutMe .tech { grid-area: tech; }
+#aboutMe .techInfo { grid-area: techInfo; text-align: left;}
+#aboutMe .image { grid-area: image; }
+#aboutMe .image2 { grid-area: image2; }
+#aboutMe .games { grid-area: games; }
+#aboutMe .gamesInfo { grid-area: gamesInfo; text-align: left;}
+#aboutMe .books { grid-area: books; }
+#aboutMe .booksInfo { grid-area: booksInfo; text-align: left;}
+#aboutMe .image3 { grid-area: image3; }
+
+#aboutMe img {
+  width: 30vw;
+}
+
+#aboutMe .leftSet {
+  justify-content: right;
+}
+#aboutMe .rightSet {
+  justify-content: left; 
 }

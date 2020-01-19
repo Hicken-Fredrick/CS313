@@ -6,7 +6,7 @@
     <title>CS313 | Index | Fred Hicken</title>
     <meta name="description" content="Index Page">
 </head>
-<body>
+<body id="index">
   
   <header>
     <h1>Fred Hicken - CS313</h1>
@@ -25,6 +25,7 @@
     <ul>
       <li>Coming Soon&copy;</li>
     </ul>
+    <br>
     <li>Team Work</li>
     <ul>
       <li><a href="week01/week01.html">Week 01 - Basic Jquery</a></li>
