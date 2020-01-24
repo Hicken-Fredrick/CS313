@@ -27,7 +27,7 @@
   
     for ($i = 0; $i < count($items); $i++){
       for ($j = 0; $j < 1; $j++) {
-        echo "<p>" . $items[$i][0] . "   Costs --   " . $items[$i][1] . "</p>";
+        echo "<p>" . $items[$i][0] . "   Costs --   $" . $items[$i][1] . "</p>";
       }
     }
       
