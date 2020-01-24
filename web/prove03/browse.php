@@ -24,12 +24,13 @@
   </header>
   <?php
     $items = include 'items.php'; //get items list to display
-    
-    for ($i = 0; $i < count($items); $i++){
-      for ($j = 0; $i < count($items[$i]); $j++) {
-        echo "<p>" . items[$i][0] . "   Costs --   " . items[$i][1];
-      }
-    }
+    $echo count($items);
+    $echo count($items[0];
+    //for ($i = 0; $i < count($items); $i++){
+     // for ($j = 0; $i < count($items[$i]); $j++) {
+      //  echo "<p>" . items[$i][0] . "   Costs --   " . items[$i][1];
+     // }
+   // }
       
   ?>
 </body>
