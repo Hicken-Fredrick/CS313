@@ -15,12 +15,14 @@
     
   <title>Marshel's Army Depot</title>
   <meta name="author" content="Fred Hicken">
-  <meta name="description" content="Marshel's Army Depot">
+  <meta name="description" content="Karl's Knick Knack Kacavalcade">
   <link href="style.css" rel="stylesheet">
   
 </head>
 <body>
   <header>
+    <h1>Karl's Knick Knack Kacavalcade</h1>
+    <h2>A Few Things - For A Few People</h2>
   </header>
   <?php
     $items = include 'items.php'; //get items list to display
