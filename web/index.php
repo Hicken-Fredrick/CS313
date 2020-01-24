@@ -23,7 +23,7 @@
   <ul>
     <li>Assignments</li>
     <ul>
-      <li>Coming Soon&copy;</li>
+      <li><a href="prove03/browse.php">Week 03 - Shopping Cart</a></li>
     </ul>
     <br>
     <li>Team Work</li>
