@@ -23,15 +23,11 @@
   <header>
   </header>
   <?php
-    $items = array (
-    array("Tank", "1.5 Million"),
-    array("Plane", "2.3 Million"),
-    array("Airship Carrier", "12.2 Million")
-    ); //get items list to display
+    $items = include 'items.php'; //get items list to display
   
     for ($i = 0; $i < count($items); $i++){
       for ($j = 0; $j < 1; $j++) {
-        echo "<p>" . items[$i][0] . "   Costs --   " . items[$i][1] . "</p>";
+        echo "<p>" . $items[$i][0] . "   Costs --   " . $items[$i][1] . "</p>";
       }
     }
       
