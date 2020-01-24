@@ -23,7 +23,7 @@
   <header>
   </header>
   <?php
-    $items = include 'items.php'; //get items list to display
+    $items = array (include 'items.php'); //get items list to display
   
     for ($i = 0; $i < count($items); $i++){
       for ($j = 0; $j < 1; $j++) {
