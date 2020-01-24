@@ -26,7 +26,7 @@
     $items = include 'items.php'; //get items list to display
   
     for ($i = 0; $i < count($items); $i++){
-      for ($j = 0; $j < count($items[$i]; $j++) {
+      for ($j = 0; $j < count($items[$i]); $j++) {
         echo "<p>" . items[$i][0] . "   Costs --   " . items[$i][1] . "</p>";
       }
     }
