@@ -10,18 +10,18 @@ return array(
     array("5 Minute Craft Guide", 99.87,
          "Some people say that this guide has changed their life, others that they never knew all the good uses household items had.
          If you buy this guide today you'll never believe what things we came up with. Inside you'll find such gems as opening a can
-         with a spoon, or making a cup out of a plastic bottle.")
+         with a spoon, or making a cup out of a plastic bottle."),
     array("Shawn's Gnarly Cut Cleaner", 9.99,
          "Never get stuck out in this apocalyptic world without some of our cut cleaner. This stuff will clean any wound of
          any type of bacteria, and heal it up right as rain. This cleaner will prevent: Rabies, T-Virus, Flu Vaccines, and Bite wounds.
-         If you wanna survive out there, buy our stuff... or else.")
+         If you wanna survive out there, buy our stuff... or else."),
     array("Tempered Metal Belt Buckle", 0.37,
          "Have you ever watched a western movie with slick cowboys and watned to look just like them? Well this will be the finest
          part of your ensamble, and it has great added functionality! It can deflect bullets or even knives while staying completely
-         clean and mark free for its entire life!")
+         clean and mark free for its entire life!"),
     array("Squicky Scone Toy", 6.75,
          "Have you ever been trapped in a quiet room without fun or interesting sounds? Then your in luck because with our 
          patented squick technology you'll neve go another minute in boring silence. This item will squick without any visable
-         reason to for hour on end, order today!")
+         reason to for hour on end, order today!"),
 );
 ?>
