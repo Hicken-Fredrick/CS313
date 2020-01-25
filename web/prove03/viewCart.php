@@ -27,10 +27,10 @@
   </header>
   
   <?php
-  $j = 0;
+  $total = 0;
   for ($i = 0; $i < count($_SESSION['cart']); $i++){
     $j += 1;
-    echo "<p> Cart Item -- " . $j . " - " . $_SESSION['cart'][$i] . " Was Added.</p>";
+    echo "<p> ORDER: " . $_SESSION['cart'][$i][0] . " : $" . $_SESSION['cart'][$i][1] . "</p>";
   }
   ?>  
 </body>
