@@ -1,7 +1,7 @@
 <?php
   
   if(isset($_POST['bringItDown'])){
-    unset($_SESSION['cart'][0]);
+    unset($_SESSION['cart']['cartNumber']);
   }
 
 ?>
