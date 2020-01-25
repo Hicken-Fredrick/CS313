@@ -31,7 +31,9 @@
   for ($i = 0; $i < count($_SESSION['cart']); $i++){
     $j += 1;
     echo "<p> ORDER: " . $_SESSION['cart'][$i][0] . " : $" . $_SESSION['cart'][$i][1] . "</p>";
+    $j+=$_SESSION['cart'][$i][1]
   }
+  echo "<h3>TOTAL: $" . $j;
   ?>  
 </body>
 </html>
