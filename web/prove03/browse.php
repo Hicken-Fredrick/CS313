@@ -3,8 +3,11 @@
 
 	if(!isset($_SESSION['cart'])){ //check if session is there already
 		$_SESSION['cart'] = array(); //name an array to store items
-      
 	}
+
+    function addToCart() {
+      array_push ($_SESSION['cart'], "stuffs");
+    }
 
 ?>
 <!DOCTYPE html>
@@ -31,7 +34,7 @@
     echo "<main>";
     for ($i = 0; $i < count($items); $i++){
       for ($j = 0; $j < 1; $j++) {
-        echo "<form method=\"GET\" action=\"addToCart.php\">";
+        echo "<form method=\"GET\" action=\"addToCart()\">";
         echo "<div><div><h3>" . $items[$i][0] . "</h3>";
         echo "<span>$" . $items[$i][1] . "</span></div>";
         echo "<p>" . $items[$i][2] . "</p></div>";
