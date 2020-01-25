@@ -32,7 +32,7 @@
   echo "<legend>ORDER INFORMATION</legend>";
   foreach($_SESSION['cart'] as $key => $cartItem){
     echo "<label><p><span> ORDER: " . $cartItem[0] . " : $" . $cartItem[1] . "</span></p></label>";
-    $total+=$_SESSION['cart'][$i][1];
+    $total+=$cartItem[1];
   }
   unset($cartItem);
   echo "<label><span> TOTAL: $" . $total . "</span></label>";
