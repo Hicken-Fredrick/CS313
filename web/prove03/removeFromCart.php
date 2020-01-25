@@ -4,4 +4,5 @@
    unset($_SESSION['cartNumber']);
   }
 
+  unset($_SESSION[0];
 ?>
