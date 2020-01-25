@@ -31,10 +31,11 @@
     echo "<main>";
     for ($i = 0; $i < count($items); $i++){
       for ($j = 0; $j < 1; $j++) {
+        echo "<form method=\"GET\" action=\"addToCart.php\">";
         echo "<div><div><h3>" . $items[$i][0] . "</h3>";
         echo "<span>$" . $items[$i][1] . "</span></div>";
         echo "<p>" . $items[$i][2] . "</p></div>";
-        echo "<button type=\"button\" <a href=\"addToCart.php\"></a> >ADD TO CART</button>";
+        echo "<button type=\"submit\">ADD TO CART</button></form>"
       }
     }
     echo "</main>";
