@@ -3,6 +3,7 @@
 
 	if(!isset($_SESSION['cart'])){ //check if session is there already
 		$_SESSION['cart'] = array(); //name an array to store items
+        $_SESSION['address'];
 	}
 
 ?>
@@ -27,10 +28,13 @@
   </header>
   
   <?php
+  include 'removeFromCart.php'; //allows removal button to work
   $total = 0;
   for ($i = 0; $i < count($_SESSION['cart']); $i++){
-    $j += 1;
+    echo "<form method=\"post\">";
     echo "<p> ORDER: " . $_SESSION['cart'][$i][0] . " : $" . $_SESSION['cart'][$i][1] . "</p>";
+    echo "<input type=\"hidden\" name=\"cartNumber\" value=\"" . $i . "\">"; //used to add items using code
+    echo "<input type=\"submit\" name=\"bringItDown\" class=\"button\" value=\"REMOVE FROM CART\"></form>";
     $j+=$_SESSION['cart'][$i][1];
   }
   echo "<h3>TOTAL: $" . $j . "</h3>";
