@@ -34,7 +34,7 @@
         echo "<div><div><h3>" . $items[$i][0] . "</h3>";
         echo "<span>$" . $items[$i][1] . "</span></div>";
         echo "<p>" . $items[$i][2] . "</p></div>";
-        echo "<button type=\"button\" onclick=\"addToCart.php\">ADD TO CART</button>";
+        echo "<button type=\"button\" <a href=\"addToCart.php\"></a> >ADD TO CART</button>";
       }
     }
     echo "</main>";
