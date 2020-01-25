@@ -30,18 +30,19 @@
   <?php
   include 'removeFromCart.php'; //allows removal button to work
   $total = 0;
-  echo "<main>";
+  echo "<main><form action=\"checkout.php\" method=\"POST\">";
   foreach($_SESSION['cart'] as $key => $cartItem){
     echo "<form method=\"post\">";
     echo "<p> ORDER: " . $cartItem[0] . " : $" . $cartItem[1] . "</p>";
     echo "<input type=\"hidden\" name=\"cartNumber\" value=\"" . $key . "\">"; //used to add items using code
     echo "<input type=\"submit\" name=\"bringItDown\" class=\"button\" value=\"REMOVE FROM CART\"></form>";
-    $j+=$_SESSION['cart'][$i][1];
+    $total+=$_SESSION['cart'][$i][1];
   }
   unset($cartItem);
-  echo "<h3>TOTAL: $" . $j . "</h3>";
-  echo "</main>";
-  print_r($_SESSION);
+  echo "<h3>TOTAL: $" . $total . "</h3>";
+  echo "<h4>Almost There! If this all looks right click below to checkout</h4>";
+  echo "<input type=\"submit\" value=\"CHECKOUT\"/>";
+  echo "</form></main>";
   ?>  
 </body>
 </html>
