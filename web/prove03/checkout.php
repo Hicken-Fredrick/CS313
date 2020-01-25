@@ -19,7 +19,8 @@
   echo "<h1>CONTENTS OF CART</h1>";
   $j = 0;
   for ($i = 0; $i < count($_SESSION['cart']); $i++){
-    echo "<p> Cart Item --" . $j+=1 . $_SESSION['cart'][$i] . " Was Added.</p>";
+    echo "<p> Cart Item --" . $j . $_SESSION['cart'][$i] . " Was Added.</p>";
+    $j += 1;
   }
   echo "<h1>END OF CONTENTS</h1>";
   ?>                               
