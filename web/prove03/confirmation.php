@@ -32,7 +32,7 @@
     echo "<main><fieldset>";
     echo "<legend>COMPLETED ORDER DETAILS</legend>";
     foreach($_SESSION['cart'] as $key => $cartItem){
-      echo "<label><span> ORDER: " . $cartItem[0] . " : $" . $cartItem[1] . "</span></label>";
+      echo "<label><p><span> ORDER: " . $cartItem[0] . " : $" . $cartItem[1] . "</span></p></label>";
     }
     echo "<label><span><strong> TOTAL: $" . $total . "</strong></span></label>";
     echo "</fieldset>";

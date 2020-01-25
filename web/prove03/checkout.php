@@ -31,7 +31,7 @@
   echo "<main><fieldset>";
   echo "<legend>ORDER INFORMATION</legend>";
   foreach($_SESSION['cart'] as $key => $cartItem){
-    echo "<label><span> ORDER: " . $cartItem[0] . " : $" . $cartItem[1] . "</span></label>";
+    echo "<label><p><span> ORDER: " . $cartItem[0] . " : $" . $cartItem[1] . "</span></p></label>";
     $total+=$_SESSION['cart'][$i][1];
   }
   unset($cartItem);
@@ -41,7 +41,7 @@
   echo "<form action=\"confirmation.php\" method=\"POST\">";
   echo "<p>ADDRESSS: <input name=\"address\" type=\"text\" placeholder=\"123 Fake Street\"/></p>";
   echo "<input type=\"hidden\" name=\"totalAmmount\" value=\"" . $total . "\">"; //used to add items using code
-  echo "<input type=\"submit\" value=\"CONFIRM\"/>";
+  echo "<input type=\"submit\" value=\"CONFIRM\">";
   echo "</form></fieldset></main>";
   ?>
 </body>
