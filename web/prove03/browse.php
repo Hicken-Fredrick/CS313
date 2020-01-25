@@ -32,9 +32,11 @@
         echo "<div><div><h3>" . $items[$i][0] . "</h3>";
         echo "<span>$" . $items[$i][1] . "</span></div>";
         echo "<p>" . $items[$i][2] . "</p></div>";
+        echo "<button type=\"button\" onclick=\"addToCart.php?id=" . $items[$i][0] . "\">ADD TO CART</button>";
       }
     }
-    echo "</main>"; 
+    echo "</main>";
+    print_r($_SESSION);
   ?>
 </body>
 </html>
