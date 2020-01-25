@@ -24,7 +24,7 @@
   <header>
     <h1>Karl's Knick Knack Kacavalcade</h1>
     <h2>A Few Things - For A Few People</h2>
-    <h1><a href="checkout.php">GO TO TEST</a></h1>
+    <h2><a href="viewCart.php">Visit Cart</a></h2>
   </header>
   <?php
     $items = include 'items.php'; //get items list to display

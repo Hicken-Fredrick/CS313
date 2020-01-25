@@ -20,6 +20,14 @@
   
 </head>
 <body>
-  
+  <?php
+  echo "<h1>CONTENTS OF CART</h1>";
+  $j = 0;
+  for ($i = 0; $i < count($_SESSION['cart']); $i++){
+    $j += 1;
+    echo "<p> Cart Item -- " . $j . " - " . $_SESSION['cart'][$i] . " Was Added.</p>";
+  }
+  echo "<h1>END OF CONTENTS</h1>";
+  ?>  
 </body>
 </html>
