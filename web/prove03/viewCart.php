@@ -28,7 +28,7 @@
   </header>
   
   <?php
-  include 'removeFromCart.php'; //allows removal button to work
+  //include 'removeFromCart.php'; //allows removal button to work
   $total = 0;
   for ($i = 0; $i < count($_SESSION['cart']); $i++){
     echo "<form method=\"post\">";
