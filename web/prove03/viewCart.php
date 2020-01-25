@@ -30,6 +30,7 @@
   <?php
   include 'removeFromCart.php'; //allows removal button to work
   $total = 0;
+  echo "<main>";
   for ($i = 0; $i < count($_SESSION['cart']); $i++){
     echo "<form method=\"post\">";
     echo "<p> ORDER: " . $_SESSION['cart'][$i][0] . " : $" . $_SESSION['cart'][$i][1] . "</p>";
@@ -38,6 +39,7 @@
     $j+=$_SESSION['cart'][$i][1];
   }
   echo "<h3>TOTAL: $" . $j . "</h3>";
+  echo "</main>";
   print_r($_SESSION);
   ?>  
 </body>
