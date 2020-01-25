@@ -1,10 +1,5 @@
 <?php //check on every page to ensure landing point continuity
   session_start(); //start session
-
-	if(!isset($_SESSION['cart'])){ //check if session is there already
-		$_SESSION['cart'] = array(); //name an array to store items
-	}
-
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
