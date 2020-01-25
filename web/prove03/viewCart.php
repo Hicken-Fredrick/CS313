@@ -20,14 +20,18 @@
   
 </head>
 <body>
+  <header>
+    <h1>Karl's Knick Knack Kacavalcade</h1>
+    <h2>A Few Things - For A Few People</h2>
+    <h2><a href="browse.php">Return To Store</a></h2>
+  </header>
+  
   <?php
-  echo "<h1>CONTENTS OF CART</h1>";
   $j = 0;
   for ($i = 0; $i < count($_SESSION['cart']); $i++){
     $j += 1;
     echo "<p> Cart Item -- " . $j . " - " . $_SESSION['cart'][$i] . " Was Added.</p>";
   }
-  echo "<h1>END OF CONTENTS</h1>";
   ?>  
 </body>
 </html>

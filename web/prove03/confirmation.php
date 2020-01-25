@@ -20,6 +20,11 @@
   
 </head>
 <body>
+  <header>
+    <h1>Karl's Knick Knack Kacavalcade</h1>
+    <h2>A Few Things - For A Few People</h2>
+    <h2><a href="browse.php">BUY MORE STUFFS!</a></h2>
+  </header>
   
 </body>
 </html>
