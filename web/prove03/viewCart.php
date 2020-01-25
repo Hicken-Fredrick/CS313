@@ -13,7 +13,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     
-  <title>Marshel's Army Depot</title>
+  <title>Karl's Knick Knack Kacavalcade</title>
   <meta name="author" content="Fred Hicken">
   <meta name="description" content="Marshel's Army Depot">
   <link href="style.css" rel="stylesheet">

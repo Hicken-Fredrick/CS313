@@ -6,7 +6,7 @@ body {
     display: flex;
     min-height: 100vh; 
     flex-direction: column;
-    background-color: #bc9b82;
+    background-color: #b1937d;
     color: #0f1011;
 }
 header {
@@ -15,7 +15,7 @@ header {
     text-align: center;
     width: 100%;
     background-color: #3b2413;
-    color: #FF5733;
+    color:  #b85039;
     justify-content: center;
     margin-bottom: 5px;
     padding-bottom: 25px;
