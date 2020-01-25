@@ -4,7 +4,6 @@
 	if(!isset($_SESSION['cart'])){ //check if session is there already
 		$_SESSION['cart'] = array(); //name an array to store items
       
-    array_push ($_SESSION['cart'], "stuffs");
 	}
 
 ?>
@@ -25,6 +24,7 @@
   <header>
     <h1>Karl's Knick Knack Kacavalcade</h1>
     <h2>A Few Things - For A Few People</h2>
+    <h1><a href="checkout.php">GO TO TEST</a></h1>
   </header>
   <?php
     $items = include 'items.php'; //get items list to display
@@ -38,7 +38,6 @@
       }
     }
     echo "</main>";
-    print_r($_SESSION);
   ?>
 </body>
 </html>
