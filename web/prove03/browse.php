@@ -3,6 +3,8 @@
 
 	if(!isset($_SESSION['cart'])){ //check if session is there already
 		$_SESSION['cart'] = array(); //name an array to store items
+      
+    array_push ($_SESSION['cart'], "stuffs");
 	}
 
 ?>
