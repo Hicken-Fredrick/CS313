@@ -28,14 +28,15 @@
   </header>
   <?php
     $items = include 'items.php'; //get items list to display
+    include 'addToCart.php';
     echo "<main>";
     for ($i = 0; $i < count($items); $i++){
       for ($j = 0; $j < 1; $j++) {
-        echo "<form method=\"GET\" action=\"addToCart.php\" onsubmit=\"return false\">";
+        echo "<form method=\"GET\">";
         echo "<div><div><h3>" . $items[$i][0] . "</h3>";
         echo "<span>$" . $items[$i][1] . "</span></div>";
         echo "<p>" . $items[$i][2] . "</p></div>";
-        echo "<input type=\"submit\" name=\"ADD TO CART\"></form>";
+        echo "<input type=\"submit\" name=\"ADD TO CART\" class=\"button\" value=\"add\"></form>";
       }
     }
     echo "</main>";

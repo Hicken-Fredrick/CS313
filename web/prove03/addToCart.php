@@ -1,6 +1,5 @@
 <?php
-  session_start();
-  
-  array_push ($_SESSION['cart'], "stuffs");
-  
+  if(isset($_GET['add'])){
+   array_push($_SESSION['cart'], "stuffs");
+  }
 ?>
