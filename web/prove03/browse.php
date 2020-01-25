@@ -33,10 +33,10 @@
     for ($i = 0; $i < count($items); $i++){
       for ($j = 0; $j < 1; $j++) {
         echo "<form method=\"post\">";
-        echo "<div><div><h3>" . $items[$i][0] . "</h3>";
+        echo "<div name=\"itemCode\" value=\"" . $i . "\"><div><h3>" . $items[$i][0] . "</h3>";
         echo "<span>$" . $items[$i][1] . "</span></div>";
         echo "<p>" . $items[$i][2] . "</p></div>";
-        echo "<input type=\"submit\" name=\"addItUp\" class=\"button\" value=\"" . $i . "\"></form>";
+        echo "<input type=\"submit\" name=\"addItUp\" class=\"button\" value=\"ADD TO CART\"></form>";
       }
     }
     echo "</main>";
