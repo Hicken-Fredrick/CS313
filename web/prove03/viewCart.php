@@ -30,16 +30,15 @@
   <?php
   include 'removeFromCart.php'; //allows removal button to work
   $total = 0;
-  $i = 0;
   echo "<main>";
-  foreach($_SESSION['cart'] as $cartItem){
+  foreach($_SESSION['cart'] as $key => $cartItem){
     echo "<form method=\"post\">";
     echo "<p> ORDER: " . $cartItem[0] . " : $" . $cartItem[1] . "</p>";
-    echo "<input type=\"hidden\" name=\"cartNumber\" value=\"" . $i . "\">"; //used to add items using code
+    echo "<input type=\"hidden\" name=\"cartNumber\" value=\"" . $key . "\">"; //used to add items using code
     echo "<input type=\"submit\" name=\"bringItDown\" class=\"button\" value=\"REMOVE FROM CART\"></form>";
     $j+=$_SESSION['cart'][$i][1];
-    $i+=1;
   }
+  unset($cartItem);
   echo "<h3>TOTAL: $" . $j . "</h3>";
   echo "</main>";
   print_r($_SESSION);
