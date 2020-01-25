@@ -38,6 +38,7 @@
     $j+=$_SESSION['cart'][$i][1];
   }
   echo "<h3>TOTAL: $" . $j . "</h3>";
+  print_r($_SESSION);
   ?>  
 </body>
 </html>
