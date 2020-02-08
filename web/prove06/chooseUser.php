@@ -8,8 +8,8 @@
 </head>
 <body>
   <?php
-    $firstName = htmlspecialchars(ucfirst($_POST['userFirst']));
-    $lastName = htmlspecialchars(ucfirst($_POST['userLast']));
+    $firstName = htmlspecialchars(strtolower($_POST['userFirst']));
+    $lastName = htmlspecialchars(strtolower($_POST['userLast']));
   
     try
     {
@@ -29,7 +29,7 @@
     
       echo "<h1>CHOOSE USER</h1>";
         
-      foreach ($db->query('SELECT * FROM wishlist."user" WHERE userid = 1') as $row)
+      foreach ($db->query('SELECT * FROM wishlist."user" WHERE firstname = ' . $firstName . ' AND lastname = ' . $lastName) as $row)
       {
         echo 'USER: ' . $row['firstname'] . ' ' . $row['lastname'] . '<br/>';        
       }
