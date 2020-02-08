@@ -38,15 +38,12 @@
   <?php
     $user = htmlspecialchars($_POST['user']);
     
-    foreach ($db->query('SELECT ' . $user . 'FROM wishlist.\"user\"') as $row)
+    foreach ($db->query('SELECT * FROM wishlist.\"user\"') as $row)
     {
       echo 'USER: ' . $row["firstName"] . ' ' . $row["lastName"];        
     }
   
-    if ($row == null)
-    {
-      echo 'NO USER FOUND BY THAT NAME';
-    }
+
   ?>
 </body>
 </html>
