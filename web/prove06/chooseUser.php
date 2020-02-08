@@ -18,6 +18,10 @@
     
         echo "<h1>CHOOSE USER</h1>";
         
+      foreach ($db->query('SELECT * FROM wishlist.\"user\"') as $row)
+    {
+      echo 'USER: ' . $row['firstName'] . ' ' . $row['lastName'];        
+    }
     }
     catch (PDOException $ex)
     {
@@ -38,10 +42,7 @@
   <?php
     $user = htmlspecialchars($_POST['user']);
     
-    foreach ($db->query('SELECT * FROM wishlist.\"user\"') as $row)
-    {
-      echo 'USER: ' . $row["firstName"] . ' ' . $row["lastName"];        
-    }
+    
   
 
   ?>
