@@ -9,7 +9,8 @@
 <body>
   <form action="chooseUser.php" method="post">
 
-        Name: <input type="text" name="user"><br>
+        First Name: <input type="text" name="userFirst"><br/>
+        Last Name: <input type="text" name="userLast"><br/>
 
         <!-- Chapter: <input type="text" name="chapter"><br>
 

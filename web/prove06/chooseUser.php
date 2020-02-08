@@ -1,5 +1,16 @@
-<?php
-
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <?php include 'header.php'; ?> <!-- Includes Meta Data for Charset, Viewport, and Author -->
+    <link href="main.css" rel="stylesheet">
+    <title>CS313 | Index | Fred Hicken</title>
+    <meta name="description" content="Index Page">
+</head>
+<body>
+  <?php
+    $firstName = htmlspecialchars(ucfirst($_POST['userFirst']));
+    $lastName = htmlspecialchars(ucfirst($_POST['userLast']));
+  
     try
     {
         $dbUrl = getenv('DATABASE_URL');
@@ -18,7 +29,7 @@
     
         echo "<h1>CHOOSE USER</h1>";
         
-      foreach ($db->query('SELECT * FROM wishlist."user"') as $row)
+      foreach ($db->query('SELECT * FROM wishlist."user" WHERE firstname =' . $firstName . 'AND lastname =' . $lastName) as $row)
     {
       echo 'USER: ' . $row['firstname'] . ' ' . $row['lastname'] . '<br/>';        
     }
@@ -28,21 +39,6 @@
         echo 'Error!: ' . $ex->getMessage();
         die();
     }
-
-?>
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <?php include 'header.php'; ?> <!-- Includes Meta Data for Charset, Viewport, and Author -->
-    <link href="main.css" rel="stylesheet">
-    <title>CS313 | Index | Fred Hicken</title>
-    <meta name="description" content="Index Page">
-</head>
-<body>
-  <?php
-    $user = htmlspecialchars($_POST['user']);
-    
-    
   
 
   ?>
