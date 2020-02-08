@@ -1,10 +1,7 @@
 <?php //check on every page to ensure landing point continuity
   session_start(); //start session
 
-	if(!isset($_SESSION['user'])){ //check if session is there already
-		$_SESSION['user'] = htmlspecialchars($_POST['id']); //name an array to store items
-	}
-
+  $_SESSION['user'] = htmlspecialchars($_POST['id']); //name an array to store items
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
