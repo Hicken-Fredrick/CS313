@@ -47,6 +47,7 @@
         echo 'ITEM: ' . $row['itemname'] . ' - ' . $row['itemcost'] . '<br/>';
         echo 'INFO: ' . $row['itemlocation'] . ' - ' . $row['iteminfo'] . '<br/>';
         echo '<input type="hidden" value="' . $row[itemid] .'" name="id">';
+        echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
         echo '<input type="submit" value="DELETE"></form>';
       }
     }
