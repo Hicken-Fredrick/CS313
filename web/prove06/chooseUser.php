@@ -7,6 +7,9 @@
     <meta name="description" content="Index Page">
 </head>
 <body>
+  <header>
+    <h1>CHOOSE ACTIVE USER</h1>
+  </header>
   <?php
     $firstName = htmlspecialchars(strtolower($_POST['userFirst']));
     $lastName = htmlspecialchars(strtolower($_POST['userLast']));
