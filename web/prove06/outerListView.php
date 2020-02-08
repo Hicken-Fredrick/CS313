@@ -38,7 +38,7 @@
       foreach ($db->query('SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid IS NULL') as $row)
       {
         echo '<form action="innerListView.php" method="post">';
-        echo 'LIST: ' . $row['name'] . ' - ' . $row['description'] . '<br/>';
+        echo 'LIST: ' . $row['listname'] . ' - ' . $row['listdescription'] . '<br/>';
         echo '<input type="hidden" value="' . $row[listid] .'" name="id">';
         echo '<input type="submit" value="Choose"></form>';
       }
