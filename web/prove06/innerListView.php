@@ -6,3 +6,7 @@
     <title>CS313 | Index | Fred Hicken</title>
     <meta name="description" content="Index Page">
 </head>
+<body>
+  
+</body>
+</html>

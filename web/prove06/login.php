@@ -12,10 +12,6 @@
 
         First Name: <input type="text" name="userFirst"><br/>
         Last Name: <input type="text" name="userLast"><br/>
-
-        <!-- Chapter: <input type="text" name="chapter"><br>
-
-        Verse: <input type="text" name="chapter"><br> -->
         
         <input type="submit">
     </form>

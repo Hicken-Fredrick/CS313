@@ -6,3 +6,13 @@
     <title>CS313 | Index | Fred Hicken</title>
     <meta name="description" content="Index Page">
 </head>
+<body>
+  <form action="outerListView.php" method="post">
+
+        <p>List Name: <input type="text" name="userFirst"><br/></p>
+        <p>List Description: <input type="text" name="userLast"><br/></p>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
