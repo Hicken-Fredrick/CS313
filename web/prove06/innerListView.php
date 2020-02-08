@@ -11,8 +11,11 @@
     <meta name="description" content="Index Page">
 </head>
 <body>
+  <header>
+    <h1>ACTIVE LISTS WITHIN</h1>
+  </header>
   <?php
-    
+    include 'nav.php';
     $sublistid = $_POST['listid'];
     
     try

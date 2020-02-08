@@ -15,8 +15,11 @@
     <meta name="description" content="Index Page">
 </head>
 <body>
+  <header>
+    <h1>CURRENT ACTIVE LISTS</h1>
+  </header>
   <?php
-  
+    include 'nav.php';
     try
     {
       $dbUrl = getenv('DATABASE_URL');

@@ -10,6 +10,10 @@
     <meta name="description" content="Index Page">
 </head>
 <body>
+  <header>
+    <h1>ADD LIST</h1>
+  </header>
+  <?php include 'nav.php'; ?>
   <form action="outerListView.php" method="post">
 
         <p>List Name: <input type="text" name="userFirst"><br/></p>

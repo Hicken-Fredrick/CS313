@@ -6,14 +6,14 @@
     <title>CS313 | Index | Fred Hicken</title>
     <meta name="description" content="Index Page">
 </head>
-<body>
+<body id="login">
+  <header>
   <h1>LOGIN HERE</h1>
+  </header>
   <form action="chooseUser.php" method="post">
-
-        First Name: <input type="text" name="userFirst"><br/>
-        Last Name: <input type="text" name="userLast"><br/>
-        
-        <input type="submit">
-    </form>
+    First Name: <input type="text" name="userFirst"><br/>
+    Last Name: <input type="text" name="userLast"><br/>
+    <input type="submit">
+  </form>
 </body>
 </html>
