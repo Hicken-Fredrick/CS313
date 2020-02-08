@@ -20,7 +20,7 @@
         
       foreach ($db->query('SELECT * FROM wishlist."user"') as $row)
     {
-      echo 'USER: ' . $row['firstName'] . ' ' . $row['lastName'];        
+      echo 'USER: ' . $row['firstname'] . ' ' . $row['lastname'] . '<br/>';        
     }
     }
     catch (PDOException $ex)
