@@ -1,6 +1,6 @@
 <?php //check on every page to ensure landing point continuity
   session_start(); //start session
-  if (isset$_POST['id']) {
+  if (isset($_POST['id'])) {
     $_SESSION['user'] = htmlspecialchars($_POST['id']); //name an array to store items
   }
 ?>
