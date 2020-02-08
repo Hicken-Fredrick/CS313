@@ -31,7 +31,7 @@
         
       foreach ($db->query('SELECT * FROM wishlist."user" WHERE firstname = \'' . $firstName . '\' AND lastname = \'' . $lastName . '\'') as $row)
       {
-        echo 'USER: ' . $row['firstname'] . ' ' . $row['lastname'] . '<br/>';        
+        echo 'USER: ' . ucfirst($row['firstname']) . ' ' . ucfirst($row['lastname']) . '<br/>';        
       }
     }
     catch (PDOException $ex)
