@@ -31,7 +31,10 @@
         
       foreach ($db->query('SELECT * FROM wishlist."user" WHERE firstname = \'' . $firstName . '\' AND lastname = \'' . $lastName . '\'') as $row)
       {
-        echo 'USER: ' . ucfirst($row['firstname']) . ' ' . ucfirst($row['lastname']) . '<br/>';        
+        echo '<form action="outerListView.php" method="post">';
+        echo 'USER: ' . ucfirst($row['firstname']) . ' ' . ucfirst($row['lastname']) . '<br/>';
+        echo '<input type="hidden" value="' . $row[userid] .'"';
+        echo '<input type="submit" value="Choose">';
       }
     }
     catch (PDOException $ex)

@@ -7,6 +7,7 @@
     <meta name="description" content="Index Page">
 </head>
 <body>
+  <h1>LOGIN HERE</h1>
   <form action="chooseUser.php" method="post">
 
         First Name: <input type="text" name="userFirst"><br/>
