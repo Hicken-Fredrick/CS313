@@ -14,12 +14,14 @@
     <h1>ADD LIST</h1>
   </header>
   <?php include 'nav.php'; ?>
-  <form action="outerListView.php" method="post">
+  <main>
+    <form action="outerListView.php" method="post">
 
-        <p>List Name: <input type="text" name="userFirst"><br/></p>
-        <p>List Description: <input type="text" name="userLast"><br/></p>
+      <p>List Name: <input type="text" name="userFirst"><br/></p>
+      <p>List Description: <input type="text" name="userLast"><br/></p>
 
-        <input type="submit">
+      <input type="submit">
     </form>
+  </main>
 </body>
 </html>

@@ -33,8 +33,7 @@
       $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-      echo "<h1>CHOOSE USER</h1>";
+      echo '<main>';
         
       foreach ($db->query('SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid IS NULL') as $row)
       {
@@ -43,6 +42,7 @@
         echo '<input type="hidden" value="' . $row[listid] .'" name="listid">';
         echo '<input type="submit" value="Choose"></form>';
       }
+       echo '</main>';
     }
     catch (PDOException $ex)
     {

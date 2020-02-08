@@ -10,10 +10,12 @@
   <header>
   <h1>LOGIN HERE</h1>
   </header>
-  <form action="chooseUser.php" method="post">
-    First Name: <input type="text" name="userFirst"><br/>
-    Last Name: <input type="text" name="userLast"><br/>
-    <input type="submit">
-  </form>
+  <main>
+    <form action="chooseUser.php" method="post">
+      First Name: <input type="text" name="userFirst"><br/>
+      Last Name: <input type="text" name="userLast"><br/>
+      <input type="submit">
+    </form>
+  </main>
 </body>
 </html>

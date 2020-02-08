@@ -30,6 +30,7 @@
 
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
+      echo '<main>';
         
       foreach ($db->query('SELECT * FROM wishlist."user" WHERE firstname = \'' . $firstName . '\' AND lastname = \'' . $lastName . '\'') as $row)
       {
@@ -38,13 +39,14 @@
         echo '<input type="hidden" value="' . $row[userid] .'" name="id">';
         echo '<input type="submit" value="Choose"></form>';
       }
+      echo '</main>';
     }
     catch (PDOException $ex)
     {
         echo 'Error!: ' . $ex->getMessage();
         die();
     }
-  
+      
 
   ?>
 </body>
