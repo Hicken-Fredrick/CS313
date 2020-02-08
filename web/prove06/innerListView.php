@@ -7,6 +7,52 @@
     <meta name="description" content="Index Page">
 </head>
 <body>
+  <?php
+    
+    $sublistid = $_POST['listid'];
+    
+    try
+    {
+      $dbUrl = getenv('DATABASE_URL');
+
+      $dbOpts = parse_url($dbUrl);
+
+      $dbHost = $dbOpts["host"];
+      $dbPort = $dbOpts["port"];
+      $dbUser = $dbOpts["user"];
+      $dbPassword = $dbOpts["pass"];
+      $dbName = ltrim($dbOpts["path"],'/');
+
+      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+      echo "<h1>CHOOSE USER</h1>";
+        
+      foreach ($db->query('SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid) as $row)
+      {
+        echo '<form action="innerListView.php" method="post">';
+        echo 'LIST: ' . $row['listname'] . ' - ' . $row['listdescription'] . '<br/>';
+        echo '<input type="hidden" value="' . $row[listid] .'" name="listid">';
+        echo '<input type="submit" value="Choose"></form>';
+      }
+      
+      foreach ($db->query('SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid) as $row)
+      {
+        echo '<form method="post">';
+        echo 'ITEM: ' . $row['itemname'] . ' - ' . $row['itemcost'] . '<br/>';
+        echo 'INFO: ' . $row['itemlocation'] . ' - ' . $row['iteminfo'] . '<br/>';
+        echo '<input type="hidden" value="' . $row[itemid] .'" name="id">';
+        echo '<input type="submit" value="DELETE"></form>';
+      }
+    }
+    catch (PDOException $ex)
+    {
+        echo 'Error!: ' . $ex->getMessage();
+        die();
+    }
   
+
+  ?>
 </body>
 </html>

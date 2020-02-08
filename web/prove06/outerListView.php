@@ -39,7 +39,7 @@
       {
         echo '<form action="innerListView.php" method="post">';
         echo 'LIST: ' . $row['listname'] . ' - ' . $row['listdescription'] . '<br/>';
-        echo '<input type="hidden" value="' . $row[listid] .'" name="id">';
+        echo '<input type="hidden" value="' . $row[listid] .'" name="listid">';
         echo '<input type="submit" value="Choose"></form>';
       }
     }
