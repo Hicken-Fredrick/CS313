@@ -24,12 +24,14 @@
     <li>Assignments</li>
     <ul>
       <li><a href="prove03/browse.php">Week 03 - Shopping Cart</a></li>
+      <li><a href="prove06/login.php">Week 05/06 - Database Wishlist</a></li>
     </ul>
     <br>
     <li>Team Work</li>
     <ul>
       <li><a href="week01/week01.html">Week 02 - Basic Jquery</a></li>
       <li><a href="week02/form.php">Week 03 - Basic PHP Programming</a></li>
+      <li><a href="team05/search.php">Week 05 - Basic Database Interaction</a></li>
       <li>More Coming Soon&copy;</li>
     </ul>
   </ul>
