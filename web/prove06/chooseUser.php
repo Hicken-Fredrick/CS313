@@ -38,7 +38,7 @@
   <?php
     $user = htmlspecialchars($_POST['user']);
     
-    foreach ($db->query('SELECT ' . $user . 'FROM team05.scriptures') as $row)
+    foreach ($db->query('SELECT ' . $user . 'FROM wishlist.\"user\"') as $row)
     {
       echo 'USER: ' . $row["firstName"] . ' ' . $row["lastName"];        
     }

@@ -7,9 +7,9 @@
     <meta name="description" content="Index Page">
 </head>
 <body>
-  <form action="output.php" method="post">
+  <form action="chooseUser.php" method="post">
 
-        Book: <input type="text" name="user"><br>
+        Name: <input type="text" name="user"><br>
 
         <!-- Chapter: <input type="text" name="chapter"><br>
 
