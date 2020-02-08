@@ -33,8 +33,8 @@
       {
         echo '<form action="outerListView.php" method="post">';
         echo 'USER: ' . ucfirst($row['firstname']) . ' ' . ucfirst($row['lastname']) . '<br/>';
-        echo '<input type="hidden" value="' . $row[userid] .'"';
-        echo '<input type="submit" value="Choose">';
+        echo '<input type="hidden" value="' . $row[userid] .'">';
+        echo '<input type="submit" value="Choose"></form>';
       }
     }
     catch (PDOException $ex)
