@@ -1,3 +1,6 @@
+<?php //check on every page to ensure landing point continuity
+  session_start(); //start session
+?>
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
