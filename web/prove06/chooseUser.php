@@ -29,7 +29,7 @@
     
         echo "<h1>CHOOSE USER</h1>";
         
-      foreach ($db->query('SELECT * FROM wishlist."user" WHERE firstname =' . $firstName . 'AND lastname =' . $lastName) as $row)
+      foreach ($db->query('SELECT * FROM wishlist."user" WHERE firstname = ' . $firstName . ' AND lastname = ' . $lastName) as $row)
     {
       echo 'USER: ' . $row['firstname'] . ' ' . $row['lastname'] . '<br/>';        
     }
