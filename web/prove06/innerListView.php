@@ -41,7 +41,7 @@
         echo '<input type="submit" value="Choose"></form>';
       }
       
-      foreach ($db->query('SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid) as $row)
+      foreach ($db->query('SELECT * FROM wishlist.item WHERE listid= ' . $sublistid) as $row)
       {
         echo '<form method="post">';
         echo 'ITEM: ' . $row['itemname'] . ' - ' . $row['itemcost'] . '<br/>';
