@@ -1,5 +1,21 @@
 <?php //check on every page to ensure landing point continuity
+  require('dbConnect.php');
+  $db = get_db();
+
   session_start(); //start session
+
+  $sublistid = $_GET['listid'];
+
+  $query = 'SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid;
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $subLists = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  $query = 'SELECT * FROM wishlist.item WHERE listid= ' . $sublistid;
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -16,51 +32,27 @@
   </header>
   <?php
     include 'nav.php';
-    $sublistid = $_POST['listid'];
-    
-    try
-    {
-      $dbUrl = getenv('DATABASE_URL');
-
-      $dbOpts = parse_url($dbUrl);
-
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
       echo '<main>';
         
-      foreach ($db->query('SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid) as $row)
+      foreach ($subLists as $subList)
       {
-        echo '<form action="innerListView.php" method="post">';
-        echo 'LIST: ' . $row['listname'] . ' - ' . $row['listdescription'] . '<br/>';
-        echo '<input type="hidden" value="' . $row[listid] .'" name="listid">';
+        echo '<form action="innerListView.php" method="get">';
+        echo 'LIST: ' . $subList['listname'] . ' - ' . $subList['listdescription'] . '<br/>';
+        echo '<input type="hidden" value="' . $subList[listid] .'" name="listid">';
         echo '<input type="submit" value="Choose"></form>';
       }
       
-      foreach ($db->query('SELECT * FROM wishlist.item WHERE listid= ' . $sublistid) as $row)
+      foreach ($items as $item)
       {
-        echo '<form method="post">';
-        echo 'ITEM: ' . $row['itemname'] . ' - ' . $row['itemcost'] . '<br/>';
-        echo 'INFO: ' . $row['itemlocation'] . ' - ' . $row['iteminfo'] . '<br/>';
-        echo '<input type="hidden" value="' . $row[itemid] .'" name="id">';
+        echo '<form method="get">';
+        echo 'ITEM: ' . $item['itemname'] . ' - ' . $item['itemcost'] . '<br/>';
+        echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
+        echo '<input type="hidden" value="' . $item[itemid] .'" name="id">';
         echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
         echo '<input type="submit" value="DELETE"></form>';
       }
        echo '</main>';
-    }
-    catch (PDOException $ex)
-    {
-        echo 'Error!: ' . $ex->getMessage();
-        die();
-    }
-  
 
   ?>
 </body>

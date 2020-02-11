@@ -1,8 +1,17 @@
 <?php //check on every page to ensure landing point continuity
+  require('dbConnect.php');
+  $db = get_db();
+
   session_start(); //start session
-  if (isset($_POST['id'])) {
-    $_SESSION['user'] = htmlspecialchars($_POST['id']); //name an array to store items
+  if (isset($_GET['id'])) {
+    $_SESSION['user'] = htmlspecialchars($_GET['id']); //name an array to store items
   }
+
+  $query = 'SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid IS NULL';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $lists = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -18,37 +27,16 @@
   </header>
   <?php
     include 'nav.php';
-    try
-    {
-      $dbUrl = getenv('DATABASE_URL');
-
-      $dbOpts = parse_url($dbUrl);
-
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      echo '<main>';
+    echo '<main>';
         
-      foreach ($db->query('SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid IS NULL') as $row)
-      {
-        echo '<form action="innerListView.php" method="post">';
-        echo 'LIST: ' . $row['listname'] . ' - ' . $row['listdescription'] . '<br/>';
-        echo '<input type="hidden" value="' . $row[listid] .'" name="listid">';
-        echo '<input type="submit" value="Choose"></form>';
-      }
-       echo '</main>';
-    }
-    catch (PDOException $ex)
+    foreach ($lists as $list)
     {
-        echo 'Error!: ' . $ex->getMessage();
-        die();
+      echo '<form action="innerListView.php" method="get">';
+      echo 'LIST: ' . $list['listname'] . ' - ' . $list['listdescription'] . '<br/>';
+      echo '<input type="hidden" value="' . $list[listid] .'" name="listid">';
+      echo '<input type="submit" value="Choose"></form>';
     }
+    echo '</main>';
   
 
   ?>

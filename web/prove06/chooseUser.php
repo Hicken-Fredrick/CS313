@@ -1,5 +1,5 @@
 <?PHP
-require('dbConnect.php');
+  require('dbConnect.php');
   $db = get_db();
 
   $firstName = htmlspecialchars(strtolower($_GET['userFirst']));
@@ -27,7 +27,7 @@ require('dbConnect.php');
   
       foreach ($users as $user)
       {
-        echo '<form action="outerListView.php" method="post">';
+        echo '<form action="outerListView.php" method="get">';
         echo 'USER: ' . ucfirst($user['firstname']) . ' ' . ucfirst($user['lastname']) . '<br/>';
         echo '<input type="hidden" value="' . $user[userid] .'" name="id">';
         echo '<input type="submit" value="Choose"></form>';
