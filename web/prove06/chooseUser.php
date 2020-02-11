@@ -1,4 +1,5 @@
 <?PHP
+require('dbConnect.php');
   $db = get_db();
 
   $firstName = htmlspecialchars(strtolower($_GET['userFirst']));
