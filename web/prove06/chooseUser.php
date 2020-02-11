@@ -1,3 +1,15 @@
+<?PHP
+  $db = get_db();
+
+  $firstName = htmlspecialchars(strtolower($_GET['userFirst']));
+  $lastName = htmlspecialchars(strtolower($_GET['userLast']));
+
+  $query = 'SELECT * FROM wishlist."user" WHERE firstname = \'' . $firstName . '\' AND lastname = \'' . $lastName . '\'';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -11,42 +23,16 @@
     <h1>CHOOSE ACTIVE USER</h1>
   </header>
   <?php
-    $firstName = htmlspecialchars(strtolower($_POST['userFirst']));
-    $lastName = htmlspecialchars(strtolower($_POST['userLast']));
   
-    try
-    {
-      $dbUrl = getenv('DATABASE_URL');
-
-      $dbOpts = parse_url($dbUrl);
-
-      $dbHost = $dbOpts["host"];
-      $dbPort = $dbOpts["port"];
-      $dbUser = $dbOpts["user"];
-      $dbPassword = $dbOpts["pass"];
-      $dbName = ltrim($dbOpts["path"],'/');
-
-      $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-      $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-      echo '<main>';
-        
-      foreach ($db->query('SELECT * FROM wishlist."user" WHERE firstname = \'' . $firstName . '\' AND lastname = \'' . $lastName . '\'') as $row)
+      foreach ($users as $user)
       {
         echo '<form action="outerListView.php" method="post">';
         echo 'USER: ' . ucfirst($row['firstname']) . ' ' . ucfirst($row['lastname']) . '<br/>';
         echo '<input type="hidden" value="' . $row[userid] .'" name="id">';
         echo '<input type="submit" value="Choose"></form>';
       }
+      unset($user);
       echo '</main>';
-    }
-    catch (PDOException $ex)
-    {
-        echo 'Error!: ' . $ex->getMessage();
-        die();
-    }
-      
 
   ?>
 </body>

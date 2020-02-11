@@ -11,7 +11,7 @@
   <h1>LOGIN HERE</h1>
   </header>
   <main>
-    <form action="chooseUser.php" method="post">
+    <form action="chooseUser.php" method="get">
       First Name: <input type="text" name="userFirst"><br/>
       Last Name: <input type="text" name="userLast"><br/>
       <input type="submit">
