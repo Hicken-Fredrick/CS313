@@ -28,8 +28,8 @@ require('dbConnect.php');
       foreach ($users as $user)
       {
         echo '<form action="outerListView.php" method="post">';
-        echo 'USER: ' . ucfirst($row['firstname']) . ' ' . ucfirst($row['lastname']) . '<br/>';
-        echo '<input type="hidden" value="' . $row[userid] .'" name="id">';
+        echo 'USER: ' . ucfirst($user['firstname']) . ' ' . ucfirst($user['lastname']) . '<br/>';
+        echo '<input type="hidden" value="' . $user[userid] .'" name="id">';
         echo '<input type="submit" value="Choose"></form>';
       }
       unset($user);
