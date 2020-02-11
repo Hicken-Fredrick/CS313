@@ -4,12 +4,13 @@
   $firstName = htmlspecialchars(strtolower($_GET['userFirst']));
   $lastName = htmlspecialchars(strtolower($_GET['userLast']));
 
-  $query = 'SELECT * FROM wishlist."user" WHERE firstname = \'' . $firstName . '\' AND lastname = \'' . $lastName . '\'';
+  $query = 'SELECT * FROM wishlist."user" WHERE firstname ="$firstName" AND lastname ="$lastName"';
   $stmt = $db->prepare($query);
   $stmt->execute();
   $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -31,6 +32,7 @@
         echo '<input type="hidden" value="' . $row[userid] .'" name="id">';
         echo '<input type="submit" value="Choose"></form>';
       }
+  
       unset($user);
       echo '</main>';
 
