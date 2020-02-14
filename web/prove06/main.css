@@ -108,5 +108,17 @@ form {
 /*  login.php specifics */
 #login form {
   border: 1px solid white;
-  width: 50%;
+  width: 450px;
+}
+#login form * {
+  margin: 5px;
+}
+
+/* chooseUse.php specifics */
+#chooseUser form {
+  border: 1px solid white;
+  width: 450px;
+}
+#chooseUser form * {
+  margin: 5px;
 }

@@ -22,9 +22,11 @@
 <body>
   <header>
     <h1>CHOOSE ACTIVE USER</h1>
+    <h2>If your a returning User and aren't showing, please check your spelling carefully</h2>
   </header>
-  <?php
-  
+  <div class="bar"></div>
+  <main id="chooseUser">
+    <?php
       foreach ($users as $user)
       {
         echo '<form action="outerListView.php" method="get">';
@@ -33,8 +35,7 @@
         echo '<input type="submit" value="Choose"></form>';
       }
       unset($user);
-      echo '</main>';
-
-  ?>
+    ?>
+  </main>
 </body>
 </html>

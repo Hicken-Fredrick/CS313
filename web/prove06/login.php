@@ -11,7 +11,7 @@
   <h1>Welcome To Wishlist Station</h1>
   <h2>Login Here!</h2>
   </header>
-  <div name="bar"></div>
+  <div class="bar"></div>
   
   <main id="login">
     <form action="chooseUser.php" method="get">
