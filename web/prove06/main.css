@@ -165,8 +165,11 @@ form {
 }
 
 #innerListView .hide {
-    display: none;
+  display: none;
+  width: 100%;
 }
 #innerListView .hide form {
-    display: flex;
+  display: flex;
+  border: none;
+  width: 90%;
 }
