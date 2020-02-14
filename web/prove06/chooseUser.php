@@ -22,7 +22,7 @@
 <body>
   <header>
     <h1>CHOOSE ACTIVE USER</h1>
-    <h2>If your a returning User and aren't showing, please check your spelling carefully</h2>
+    <h2>If your a returning user and aren't showing, please check your spelling carefully</h2>
   </header>
   <div class="bar"></div>
   <main id="chooseUser">
