@@ -110,6 +110,7 @@ form {
   border: 1px solid white;
   width: 450px;
 }
+
 #login form * {
   margin: 5px;
   padding: 5px;
@@ -121,6 +122,7 @@ form {
   width: 450px;
   padding: 5px;
 }
+
 #chooseUser form * {
   padding: 5px;
   margin: 5px;

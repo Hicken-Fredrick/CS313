@@ -4,8 +4,8 @@ require('dbConnect.php');
 $db = get_db();
 session_start();
 
-$name = strtolower(htmlspecialchars($_POST['listName']));
-$desc = strtolower(htmlspecialchars($_POST['listDescription']));
+$name = htmlspecialchars($_POST['listName']);
+$desc = htmlspecialchars($_POST['listDescription']);
 $id = htmlspecialchars($_SESSION['user']);
 
 $stmt = $db->prepare('INSERT INTO wishlist.list (listname, istdescription, userid)
