@@ -107,5 +107,6 @@ form {
 
 /*  login.php specifics */
 #login form {
-  border: 1px solid white 
+  border: 1px solid white;
+  width: 50%;
 }

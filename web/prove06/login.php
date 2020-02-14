@@ -17,10 +17,10 @@
     <form action="chooseUser.php" method="get">
       <h3>CURRENT USER</h3>
       <label for="userFirst">First Name:</label> 
-      <input type="text" id="userFirst"><br/>
+      <input type="text" id="userFirst" name="userFirst"><br/>
       
       <label for="userLast">Last Name:</label> 
-      <input type="text" id="userLast"><br/>
+      <input type="text" id="userLast" name="userLast"><br/>
       
       <input type="submit" value="Login">
     </form>
@@ -28,10 +28,10 @@
     <form action="newUser.php" method="post">
       <h3>NEW USER</h3>
       <label for="newUserFirst">First Name:</label>
-      <input type="text" id="newUserFirst"><br/>
+      <input type="text" id="newUserFirst" name="userFirst"><br/>
       
       <label for="newUserLast">Last Name:</label>
-      <input type="text" id="newUuserLast"><br/>
+      <input type="text" id="newUuserLast" name="userLast"><br/>
       
       <input type="submit" value="Create">
     </form>
