@@ -28,7 +28,7 @@
   </header>
   <?php
     include 'nav.php';
-    echo '<main>';
+    echo '<main id="outerListView">';
         
     foreach ($lists as $list)
     {

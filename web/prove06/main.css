@@ -127,3 +127,27 @@ form {
   padding: 5px;
   margin: 5px;
 }
+
+/* outerListView.php specifics */
+#outerListView form {
+  border: 1px solid white;
+  width: 450px;
+  padding: 5px;
+}
+
+#outerListView form * {
+  padding: 5px;
+  margin: 5px;
+}
+
+/* innerListView.php specifics */
+#innerListView form {
+  border: 1px solid white;
+  width: 450px;
+  padding: 5px;
+}
+
+#innerListView form * {
+  padding: 5px;
+  margin: 5px;
+}

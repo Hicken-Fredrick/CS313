@@ -30,12 +30,12 @@
 <body>
   <header>
     <h1>ACTIVE INNER LIST/S</h1>
-    <h2></h2>
+    <h2><?php echo $listName; ?></h2>
   </header>
   <?php
     include 'nav.php';
     
-      echo '<main>';
+      echo '<main id="innerListView">';
         
       foreach ($subLists as $subList)
       {
