@@ -163,8 +163,10 @@ form {
   margin: 5px;
   margin-bottom: 15px;
 }
-
 #innerListView .hide {
-    display: flex;
+  display: flex;
+}
+
+#innerListView .hide form {
     display: none;
 }
