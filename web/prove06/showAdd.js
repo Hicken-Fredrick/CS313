@@ -1,5 +1,3 @@
-$(function(){
-    $('.accordion').click(function(){
-        $(this).children("form").slideToggle(300); 
-    })
-})
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
