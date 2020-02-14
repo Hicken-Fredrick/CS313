@@ -33,10 +33,10 @@
       <form action="newUser.php" method="post">
 
         <label for="newUserFirst">First Name:</label>
-        <input type="text" id="newUserFirst" name="userFirst"><br/>
+        <input type="text" id="newUserFirst" name="userFirst" required><br/>
 
         <label for="newUserLast">Last Name:</label>
-        <input type="text" id="newUuserLast" name="userLast"><br/>
+        <input type="text" id="newUuserLast" name="userLast" required><br/>
 
         <input type="submit" value="Create">
       </form>

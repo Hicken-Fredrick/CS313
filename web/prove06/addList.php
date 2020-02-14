@@ -17,8 +17,8 @@
   <main>
     <form action="addListDB.php" method="post">
 
-      <p>List Name: <input type="text" name="listName"><br/></p>
-      <p>List Description: <input type="text" name="listDescription"><br/></p>
+      <p>List Name: <input type="text" name="listName" required><br/></p>
+      <p>List Description: <input type="text" name="listDescription" required><br/></p>
 
       <input type="submit" value="CREATE!">
     </form>

@@ -47,7 +47,12 @@
       echo '<input type="submit" value="Choose"></form>';
     }
     echo '</fieldset>';
-    
+    echo '<div class="accordion"><p>ADD A NEW LIST? CLICK HERE</p></div>'; 
+    echo '<div class="hide"><form>';
+    echo '<label for="listName">List Name:</label> <input type="text" id="listName" name="listName" required>';
+    echo '<label for="desc">List Description:</label> <input type="" id="desc" name="listDescription">';
+    echo '</form></div>';  
+  
     echo '<fieldset><legend>ITEMS</legend>';
     foreach ($items as $item)
     {
@@ -61,7 +66,7 @@
     echo '</fieldset>';
     echo '<div class="accordion"><p>ADD NEW ITEMS? CLICK HERE</p></div>'; 
     echo '<div class="hide"><form>';
-    echo '<label for="name">Item Name:</label> <input type="text" id="name" name="itemName">';
+    echo '<label for="itemName">Item Name:</label> <input type="text" id="itemName" name="itemName" required>';
     echo '<label for="cost">Item Cost:</label> <input type="" id="cost" name="itemCost">';
     echo '<label for="loc">Item Location:</label> <input type="text" id="loc" name="itemLocation">';
     echo '<label for="info">Item Info:</label> <input type="text" id="info" name="itemInfo">';
