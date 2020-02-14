@@ -5,6 +5,7 @@
   session_start(); //start session
 
   $sublistid = $_GET['listid'];
+  $listName = $_GET['listName'];
 
   $query = 'SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid;
   $stmt = $db->prepare($query);
@@ -28,7 +29,8 @@
 </head>
 <body>
   <header>
-    <h1>ACTIVE LISTS WITHIN</h1>
+    <h1>ACTIVE INNER LIST/S</h1>
+    <h2></h2>
   </header>
   <?php
     include 'nav.php';
