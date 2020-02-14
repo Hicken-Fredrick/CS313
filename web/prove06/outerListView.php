@@ -36,6 +36,7 @@
       echo 'LIST: ' . $list['listname'] . ' - ' . $list['listdescription'] . '<br/>';
       echo '<input type="hidden" value="' . $list[listid] .'" name="listid">';
       echo '<input type="hidden" value="' . $list['listname'] .'" name="listName">';
+      echo '<input type="hidden" value="' . $list['listdescription'] .'" name="listDesc">';
       echo '<input type="submit" value="Choose"></form>';
     }
     echo '</main>';

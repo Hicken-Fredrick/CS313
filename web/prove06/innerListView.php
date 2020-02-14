@@ -6,6 +6,7 @@
 
   $sublistid = $_GET['listid'];
   $listName = $_GET['listName'];
+  $listDesc = $_GET['listDesc'];
 
   $query = 'SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid;
   $stmt = $db->prepare($query);
@@ -29,8 +30,8 @@
 </head>
 <body>
   <header>
-    <h1>ACTIVE INNER LIST/S</h1>
-    <h2><?php echo $listName; ?></h2>
+    <h1><?php echo strtoupper($listName); ?> LIST</h1>
+    <h2><?php echo strtoupper($listDesc); ?></h2>
   </header>
   <?php
     include 'nav.php';
