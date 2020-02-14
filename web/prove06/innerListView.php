@@ -60,12 +60,12 @@
     }
     echo '</fieldset>';
     echo '<div id="accordion"><p>ADD NEW ITEMS? CLICK HERE</p>'; 
-    echo '<div><form>';
+    echo '<form>';
     echo 'Item Name: <input type="text" name="itemName">';
     echo 'Item Cost: <input type="" name="itemCost">';
     echo 'Item Location: <input type="text" name="itemLocation">';
     echo 'Item Info: <input type="text" name="itemInfo">';
-    echo '</form></div></div>';  
+    echo '</form></div>';  
   
     echo '</main>';
 
