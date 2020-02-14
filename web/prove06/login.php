@@ -8,14 +8,34 @@
 </head>
 <body id="login">
   <header>
-  <h1>LOGIN HERE</h1>
+  <h1>Welcome To Wishlist Station</h1>
+  <h2>Login Here!</h2>
   </header>
-  <main>
+  <div name="bar"></div>
+  
+  <main id="login">
     <form action="chooseUser.php" method="get">
-      First Name: <input type="text" name="userFirst"><br/>
-      Last Name: <input type="text" name="userLast"><br/>
-      <input type="submit">
+      <h3>CURRENT USER</h3>
+      <label for="userFirst">First Name:</label> 
+      <input type="text" id="userFirst"><br/>
+      
+      <label for="userLast">Last Name:</label> 
+      <input type="text" id="userLast"><br/>
+      
+      <input type="submit" value="Login">
     </form>
+    
+    <form action="newUser.php" method="post">
+      <h3>NEW USER</h3>
+      <label for="newUserFirst">First Name:</label>
+      <input type="text" id="newUserFirst"><br/>
+      
+      <label for="newUserLast">Last Name:</label>
+      <input type="text" id="newUuserLast"><br/>
+      
+      <input type="submit" value="Create">
+    </form>
+    
   </main>
 </body>
 </html>

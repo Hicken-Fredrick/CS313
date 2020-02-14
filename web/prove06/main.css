@@ -100,3 +100,12 @@ main {
 form {
   margin: 10px; 
 }
+.bar {
+  height: 10px;
+  border: 1px solid white;
+}
+
+/*  login.php specifics */
+#login form {
+  border: 1px solid white 
+}
