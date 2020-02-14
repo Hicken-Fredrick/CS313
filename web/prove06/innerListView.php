@@ -59,9 +59,18 @@
       echo '<input type="submit" value="DELETE"></form>';
     }
     echo '</fieldset>';
-    
+    echo '<div class="accordion"><p>ADD NEW ITEMS? CLICK HERE</p>'; 
+    echo '<form>';
+    echo 'Item Name: <input type="text" name="itemName">';
+    echo 'Item Cost: <input type="" name="itemCost">';
+    echo 'Item Location: <input type="text" name="itemLocation">';
+    echo 'Item Info: <input type="text" name="itemInfo">';
+    echo '</form></div>';  
+  
     echo '</main>';
 
   ?>
+<script src="showAdd.js"></script>
+<script src="AJAXAddDB.js"></script>
 </body>
 </html>
