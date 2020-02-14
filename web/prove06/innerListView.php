@@ -61,10 +61,10 @@
     echo '</fieldset>';
     echo '<div class="accordion"><p>ADD NEW ITEMS? CLICK HERE</p></div>'; 
     echo '<div class="hide"><form>';
-    echo 'Item Name: <input type="text" name="itemName">';
-    echo 'Item Cost: <input type="" name="itemCost">';
-    echo 'Item Location: <input type="text" name="itemLocation">';
-    echo 'Item Info: <input type="text" name="itemInfo">';
+    echo '<label for="name">Item Name:</label> <input type="text" id="name" name="itemName">';
+    echo '<label for="cost">Item Cost:</label> <input type="" id="cost" name="itemCost">';
+    echo '<label for="loc">Item Location:</label> <input type="text" id="loc" name="itemLocation">';
+    echo '<label for="info">Item Info:</label> <input type="text" id="info" name="itemInfo">';
     echo '</form></div>';  
   
     echo '</main>';
