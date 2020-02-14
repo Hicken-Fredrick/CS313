@@ -60,16 +60,17 @@
     }
     echo '</fieldset>';
     echo '<div id="accordion"><p>ADD NEW ITEMS? CLICK HERE</p>'; 
-    echo '<form>';
+    echo '<div><form>';
     echo 'Item Name: <input type="text" name="itemName">';
     echo 'Item Cost: <input type="" name="itemCost">';
     echo 'Item Location: <input type="text" name="itemLocation">';
     echo 'Item Info: <input type="text" name="itemInfo">';
-    echo '</form></div>';  
+    echo '</form></div></div>';  
   
     echo '</main>';
 
   ?>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="showAdd.js"></script>
 <script src="AJAXAddDB.js"></script>
 </body>
