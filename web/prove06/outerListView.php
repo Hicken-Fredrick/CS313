@@ -24,6 +24,7 @@
 <body>
   <header>
     <h1>CURRENT ACTIVE LISTS</h1>
+    <h2>These are your root lists, You can make any number of lists here or inside of a given list!</h2>
   </header>
   <?php
     include 'nav.php';

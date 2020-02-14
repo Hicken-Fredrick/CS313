@@ -15,12 +15,12 @@
   </header>
   <?php include 'nav.php'; ?>
   <main>
-    <form action="outerListView.php" method="post">
+    <form action="addListDB.php" method="post">
 
-      <p>List Name: <input type="text" name="userFirst"><br/></p>
-      <p>List Description: <input type="text" name="userLast"><br/></p>
+      <p>List Name: <input type="text" name="listName"><br/></p>
+      <p>List Description: <input type="text" name="listDescription"><br/></p>
 
-      <input type="submit">
+      <input type="submit" value="CREATE!">
     </form>
   </main>
 </body>

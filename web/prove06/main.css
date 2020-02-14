@@ -119,6 +119,7 @@ form {
 #chooseUser form {
   border: 1px solid white;
   width: 450px;
+  padding: 5px;
 }
 #chooseUser form * {
   padding: 5px;
