@@ -1,7 +1,7 @@
 <?php
 
-$firstName = htmlspecialchars($_POST['userFirst']);
-$lastName = htmlspecialchars($_POST['userLast']);
+$firstName = strtolower(htmlspecialchars($_POST['userFirst']));
+$lastName = strtolower(htmlspecialchars($_POST['userLast']));
 
 require('dbConnect.php');
 $db = get_db();
