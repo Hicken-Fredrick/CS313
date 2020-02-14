@@ -59,7 +59,7 @@
       echo '<input type="submit" value="DELETE"></form>';
     }
     echo '</fieldset>';
-    echo '<div id="accordion"><p>ADD NEW ITEMS? CLICK HERE</p>'; 
+    echo '<div class="accordion"><p>ADD NEW ITEMS? CLICK HERE</p>'; 
     echo '<div><form>';
     echo 'Item Name: <input type="text" name="itemName">';
     echo 'Item Cost: <input type="" name="itemCost">';
