@@ -164,7 +164,7 @@ form {
   margin-bottom: 15px;
 }
 
-#innerListView .accordion div {
+#innerListView .hide {
     display: flex;
     display: none;
 }
