@@ -36,26 +36,31 @@
   <?php
     include 'nav.php';
     
-      echo '<main id="innerListView">';
-        
-      foreach ($subLists as $subList)
-      {
-        echo '<form action="innerListView.php" method="get">';
-        echo 'LIST: ' . $subList['listname'] . ' - ' . $subList['listdescription'] . '<br/>';
-        echo '<input type="hidden" value="' . $subList[listid] .'" name="listid">';
-        echo '<input type="submit" value="Choose"></form>';
-      }
+    echo '<main id="innerListView">';
       
-      foreach ($items as $item)
-      {
-        echo '<form method="get">';
-        echo 'ITEM: ' . $item['itemname'] . ' - ' . $item['itemcost'] . '<br/>';
-        echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
-        echo '<input type="hidden" value="' . $item[itemid] .'" name="id">';
-        echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
-        echo '<input type="submit" value="DELETE"></form>';
-      }
-       echo '</main>';
+    echo '<fieldset><legend>LISTS</legend>';  
+    foreach ($subLists as $subList)
+    {
+      echo '<form action="innerListView.php" method="get">';
+      echo 'LIST: ' . $subList['listname'] . ' - ' . $subList['listdescription'] . '<br/>';
+      echo '<input type="hidden" value="' . $subList[listid] .'" name="listid">';
+      echo '<input type="submit" value="Choose"></form>';
+    }
+    echo '</fieldset>';
+    
+    echo '<fieldset><legend>ITEMS</legend>';
+    foreach ($items as $item)
+    {
+      echo '<form method="get">';
+      echo 'ITEM: ' . $item['itemname'] . ' - ' . $item['itemcost'] . '<br/>';
+      echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
+      echo '<input type="hidden" value="' . $item[itemid] .'" name="id">';
+      echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
+      echo '<input type="submit" value="DELETE"></form>';
+    }
+    echo '</fieldset>';
+    
+    echo '</main>';
 
   ?>
 </body>

@@ -1,5 +1,5 @@
 $(function(){
     $('.accordion > li').click(function(){
-        $(this).children("figure").slideToggle(300); 
+        $(this).children("form").slideToggle(300); 
     })
 })

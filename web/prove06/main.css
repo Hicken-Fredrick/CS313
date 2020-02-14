@@ -106,8 +106,14 @@ form {
 }
 
 /*  login.php specifics */
+#login fieldset {
+  width: 500px;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
 #login form {
-  border: 1px solid white;
+  padding: 5px;
   width: 450px;
 }
 
