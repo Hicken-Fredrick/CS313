@@ -10,8 +10,9 @@ $stmt = $db->prepare('INSERT INTO wishlist."user" (firstname, lastname)
     VALUES (:first, :last)');
 $stmt->bindValue(':first', $firstName, PDO::PARAM_STR);
 $stmt->bindValue(':last', $lastName, PDO::PARAM_STR);
+stmt->execute();
 
-$newPage = 'chooseUser.php?userFirst=$firstName&userLast=$lastName';
+$newPage = 'chooseUser.php?userFirst=' . $firstName . '&userLast=' . $lastName;
 header('Location:' . $newPage);
 die();
 
