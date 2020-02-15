@@ -10,13 +10,13 @@ $loc = null;
 $info = null;
 
 if(isset($_POST['itemCost'])) {
-  $subListId = $_POST['itemCost'];
+  $cost = $_POST['itemCost'];
 }
 if(isset($_POST['itemLocation'])) {
-  $subListId = $_POST['itemLocation'];
+  $loc = $_POST['itemLocation'];
 }
 if(isset($_POST['itemInfo'])) {
-  $subListId = $_POST['itemInfo'];
+  $info = $_POST['itemInfo'];
 }
 
 $stmt = $db->prepare('INSERT INTO wishlist.item (itemname, itemcost, itemlocation, iteminfo, listid)
