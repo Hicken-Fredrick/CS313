@@ -48,9 +48,10 @@
     }
     echo '</fieldset>';
     echo '<div class="accordion"><p>ADD A NEW LIST? CLICK HERE</p></div>'; 
-    echo '<div class="hide"><form>';
+    echo '<div class="hide"><form id="listInsert method="post">';
     echo '<label for="listName">List Name:</label> <input type="text" id="listName" name="listName" required>';
     echo '<label for="desc">List Description:</label> <input type="" id="desc" name="listDescription">';
+    echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
     echo '</form></div>';  
   
     echo '<fieldset><legend>ITEMS</legend>';
@@ -65,17 +66,18 @@
     }
     echo '</fieldset>';
     echo '<div class="accordion"><p>ADD NEW ITEMS? CLICK HERE</p></div>'; 
-    echo '<div class="hide"><form>';
+    echo '<div class="hide"><form id="itemInsert" method="post">';
     echo '<label for="itemName">Item Name:</label> <input type="text" id="itemName" name="itemName" required>';
     echo '<label for="cost">Item Cost:</label> <input type="" id="cost" name="itemCost">';
     echo '<label for="loc">Item Location:</label> <input type="text" id="loc" name="itemLocation">';
     echo '<label for="info">Item Info:</label> <input type="text" id="info" name="itemInfo">';
+    echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
     echo '</form></div>';  
   
     echo '</main>';
 
   ?>
 <script src="showAdd.js"></script>
-<script src="AJAXAddDB.js"></script>
+<script src="AJAXAddCall.js"></script>
 </body>
 </html>
