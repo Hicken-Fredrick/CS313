@@ -38,7 +38,7 @@
     
     echo '<main id="innerListView">';
       
-    echo '<fieldset><legend>LISTS</legend>';  
+    echo '<fieldset id="listsList"><legend>LISTS</legend>';  
     foreach ($subLists as $subList)
     {
       echo '<form action="innerListView.php" method="get">';
@@ -52,9 +52,10 @@
     echo '<label for="listName">List Name:</label> <input type="text" id="listName" name="listName" required>';
     echo '<label for="desc">List Description:</label> <input type="" id="desc" name="listDescription">';
     echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
+    echo '<button id="listAdd">CREATE</button>';
     echo '</form></div>';  
   
-    echo '<fieldset><legend>ITEMS</legend>';
+    echo '<fieldset id="itemsList"><legend>ITEMS</legend>';
     foreach ($items as $item)
     {
       echo '<form method="get">';
@@ -73,7 +74,7 @@
     echo '<label for="info">Item Info:</label> <input type="text" id="info" name="itemInfo">';
     echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
     echo '</form></div>';  
-  
+    echo '<button id="itemAdd">CREATE</button>';
     echo '</main>';
 
   ?>

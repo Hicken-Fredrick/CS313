@@ -20,23 +20,15 @@ if(isset($_POST['itemInfo'])) {
   $subListId = $_POST['itemInfo'];
 }
 
-$stmt = $db->prepare('INSERT INTO wishlist.item ()
-    VALUES ()');
-$stmt->bindValue('', $, PDO::);
-$stmt->bindValue('', $, PDO::);
-$stmt->bindValue('', $, PDO::);
-$stmt->bindValue('', $, PDO::);
-$stmt->bindValue('', $, PDO::);
+$stmt = $db->prepare('INSERT INTO wishlist.item (itemname, itemcost, itemlocation, iteminfo, listid)
+    VALUES (:name, :cost, :loc, :info, :subId)');
+$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+$stmt->bindValue(':cost', $cost, PDO::PARAM_STR);
+$stmt->bindValue(':loc', $loc, PDO::PARAM_STR);
+$stmt->bindValue(':info', $info, PDO::PARAM_STR);
+$stmt->bindValue(':subId', $subListId, PDO::PARAM_INT);
 $stmt->execute();
 
-$newPage = 'outerListView.php';
-header('Location:' . $newPage);
-die();
+echo "ITEM ADDED";
 
 ?>
-
-echo '<label for="itemName">Item Name:</label> <input type="text" id="itemName" name="itemName" required>';
-    echo '<label for="cost">Item Cost:</label> <input type="" id="cost" name="itemCost">';
-    echo '<label for="loc">Item Location:</label> <input type="text" id="loc" name="itemLocation">';
-    echo '<label for="info">Item Info:</label> <input type="text" id="info" name="itemInfo">';
-    echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
