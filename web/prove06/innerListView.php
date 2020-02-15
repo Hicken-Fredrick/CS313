@@ -73,8 +73,8 @@
     echo '<label for="loc">Item Location:</label> <input type="text" id="loc" name="itemLocation">';
     echo '<label for="info">Item Info:</label> <input type="text" id="info" name="itemInfo">';
     echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
-    echo '</form></div>';  
     echo '<button id="itemAdd">CREATE</button>';
+    echo '</form></div>';  
     echo '</main>';
 
   ?>

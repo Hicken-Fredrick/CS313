@@ -2,7 +2,6 @@
 
 require('dbConnect.php');
 $db = get_db();
-session_start();
 
 $name = htmlspecialchars($_POST['itemName']);
 $subListId = htmlspecialchars($_POST['listid']);
