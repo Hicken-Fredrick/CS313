@@ -15,7 +15,7 @@ userid INT NOT NULL,
 subListid INT,
 CONSTRAINT list_p_key PRIMARY KEY (listid),
 CONSTRAINT "list_sublistkey" FOREIGN KEY (sublistid)
-   REFERENCES wishlist.list (listid) MATCH SIMPLE,
+   REFERENCES wishlist.list (listid) MATCH SIMPLE ON DELETE CASCADE ON UPDATE CASCADE,
 CONSTRAINT "list_userkey" FOREIGN KEY (userID)
    REFERENCES wishlist.user (userid) MATCH SIMPLE
 );
@@ -23,11 +23,11 @@ CONSTRAINT "list_userkey" FOREIGN KEY (userID)
 CREATE TABLE wishList.item(
 itemID BIGSERIAL NOT NULL,
 itemName TEXT NOT NULL,
-itemCost DECIMAL (6, 2),
+itemCost DECIMAL (8, 2),
 itemLocation TEXT,
 itemInfo TEXT,
 listid INT NOT NULL,
 CONSTRAINT item_p_key PRIMARY KEY (itemid),
 CONSTRAINT item_list_key FOREIGN KEY (listid)
-   REFERENCES wishlist.list (listid) MATCH SIMPLE
+   REFERENCES wishlist.list (listid) MATCH SIMPLE ON DELETE CASCADE ON UPDATE CASCADE
 );
