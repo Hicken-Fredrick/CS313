@@ -38,7 +38,7 @@
     echo '<main id="deleteListConfirm">';
     
     echo '<h4>ALL DATA BELOW WILL BE DELETED<h4>';  
-  
+    echo '<form action="deleteListDB.php" method="post">';
     echo '<fieldset id="listsList"><legend>LISTS</legend>';  
     foreach ($subLists as $subList)
     {
@@ -57,7 +57,8 @@
       echo '</form>';
     }
     echo '</fieldset>';
-
+    echo '<input type="hidden" value="' . $sublistid . '" name="listid">';
+    echo '<input type="submit" value="DELETE"></form>';
   ?>
 </body>
 </html>
