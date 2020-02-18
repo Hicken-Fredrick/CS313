@@ -1,6 +1,6 @@
 $("#listAdd").click( function() {
   var data = $("#listInsert :input").serializeArray();
-  $.post( $("#listInsert").attr("action"), data, function(info) { $("#listsList").html(info); });
+  $.post( $("#listInsert").attr("action"), data, function(info) { $("#listsList").append(info); });
   cleanupList();
 });
 
