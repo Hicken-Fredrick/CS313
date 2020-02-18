@@ -1,5 +1,5 @@
 $(".delete").click( function() {
-  $(this).hide();
+  $(this).parent().hide();
 });
 
 $(".vanish").submit( function() {
