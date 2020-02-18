@@ -56,8 +56,8 @@
       echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
       echo '</form>';
     }
-    echo '</fieldset>';
-    echo '<input type="hidden" value="' . $sublistid . '" name="listid">';
+    echo '</fieldset> <br/>';
+    echo '<input type="hidden" value="' . $sublistid . '" name="listid" id="bigDelete">';
     echo '<input type="submit" value="DELETE"></form>';
   ?>
 </body>
