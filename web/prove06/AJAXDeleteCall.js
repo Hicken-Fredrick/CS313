@@ -2,6 +2,6 @@ $(".delete").click( function() {
   $(this).hide();
 });
 
-$(".delete").submit( function() {
+$(".vanish").submit( function() {
   return false;
 });
