@@ -6,7 +6,7 @@
     <li><a href="addList.php">NEW LIST</a></li>';
 
   if(isset($sublistid)) {
-    echo '<li><a href="deleteListConfirm.php?listid=' . $_GET['listid'] . $_GET['listName'] . $_GET['listDesc'] . '">DELETE LIST</a></li>';
+    echo '<li><a href="deleteListConfirm.php?listid=' . $_GET['listid'] . 'listName=' . $_GET['listName'] . 'listDesc=' . $_GET['listDesc'] . '">DELETE LIST</a></li>';
     }
 
   echo '</ul>
