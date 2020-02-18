@@ -4,16 +4,16 @@
 
   session_start(); //start session
 
-  $sublistid = $_GET['listid'];
+  $listid = $_GET['listid'];
   $listName = $_GET['listName'];
   $listDesc = $_GET['listDesc'];
 
-  $query = 'SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid;
+  $query = 'SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $listid;
   $stmt = $db->prepare($query);
   $stmt->execute();
   $subLists = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $query = 'SELECT * FROM wishlist.item WHERE listid= ' . $sublistid;
+  $query = 'SELECT * FROM wishlist.item WHERE listid= ' . $listid;
   $stmt = $db->prepare($query);
   $stmt->execute();
   $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -42,7 +42,7 @@
     
     echo '<h4>ALL DATA BELOW WILL BE DELETED<h4>';  
     echo '<form action="deleteListDB.php" method="post" id="delete">';
-    echo '<input type="hidden" value="' . $sublistid . '" name="listid" id="bigDelete"></form>';
+    echo '<input type="hidden" value="' . $listid . '" name="listid"></form>';
     echo '<fieldset id="listsList"><legend>LISTS</legend>';  
     foreach ($subLists as $subList)
     {
