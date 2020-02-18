@@ -6,7 +6,7 @@ $("#listAdd").click( function() {
 
 $("#itemAdd").click( function() {
   var data = $("#itemInsert :input").serializeArray();
-  $.post( $("#itemInsert").attr("action"), data, function(info) { $("#itemsList").html(info); });
+  $.post( $("#itemInsert").attr("action"), data, function(info) { $("#itemsList").append(info); });
   cleanupItem();
 });
 
