@@ -17,9 +17,11 @@ $stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
 $stmt->bindValue(':subId', $subListId, PDO::PARAM_INT);
 $stmt->execute();
 
+$listId = $db->lastInsertId('wishlist.list_listid_seq');
+
 echo '<form action="innerListView.php" method="get">';
 echo 'LIST: ' . $name . ' - ' . $desc . '<br/>';
-echo '<input type="hidden" value="' . $subListId . '" name="listid">';
+echo '<input type="hidden" value="' . $listId . '" name="listid">';
 echo '<input type="submit" value="Choose"></form>';
 
 ?>
