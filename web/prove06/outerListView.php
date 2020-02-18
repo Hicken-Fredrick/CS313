@@ -28,8 +28,6 @@
   </header>
   <?php
     include 'nav.php';
-    echo '</ul>
-    </nav>';
     echo '<main id="outerListView">';
         
     foreach ($lists as $list)
