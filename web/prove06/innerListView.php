@@ -59,7 +59,7 @@
     foreach ($items as $item)
     {
       echo '<form method="get">';
-      echo 'ITEM: ' . $item['itemname'] . ' - ' . $item['itemcost'] . '<br/>';
+      echo 'ITEM: ' . $item['itemname'] . ' - $' . $item['itemcost'] . '<br/>';
       echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
       echo '<input type="hidden" value="' . $item[itemid] .'" name="id">';
       echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
