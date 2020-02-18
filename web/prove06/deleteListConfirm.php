@@ -41,11 +41,12 @@
     echo '<main id="deleteListConfirm">';
     
     echo '<h4>ALL DATA BELOW WILL BE DELETED<h4>';  
-    echo '<form action="deleteListDB.php" method="post">';
+    echo '<form action="deleteListDB.php" method="post" id="delete">';
+    echo '<input type="hidden" value="' . $sublistid . '" name="listid" id="bigDelete"></form>';
     echo '<fieldset id="listsList"><legend>LISTS</legend>';  
     foreach ($subLists as $subList)
     {
-      echo '<form action="innerListView.php" method="get">';
+      echo '<form>';
       echo 'LIST: ' . $subList['listname'] . ' - ' . $subList['listdescription'] . '<br/>';
       echo '</form>';
     }
@@ -54,14 +55,15 @@
     echo '<fieldset id="itemsList"><legend>ITEMS</legend>';
     foreach ($items as $item)
     {
-      echo '<form method="get">';
+      echo '<form>';
       echo 'ITEM: ' . $item['itemname'] . ' - $' . $item['itemcost'] . '<br/>';
       echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
       echo '</form>';
     }
     echo '</fieldset> <br/>';
-    echo '<input type="hidden" value="' . $sublistid . '" name="listid" id="bigDelete">';
-    echo '<input type="submit" value="DELETE"></form>';
+    
+    echo '<button type="submit" form="delete" value="submit">DELETE</button>';  
+  
   ?>
 </body>
 </html>
