@@ -5,7 +5,7 @@
     <li><a href="outerListView.php">LISTS</a></li>
     <li><a href="addList.php">NEW LIST</a></li>';
     
-  if(isset($sublistid) {
+  if(isset($sublistid)) {
     echo '<li><a href="deleteListConfirm.php?listid="' . $sublistid .'">DELETE LIST</a></li>';
     }
 
