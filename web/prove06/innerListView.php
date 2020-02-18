@@ -35,7 +35,7 @@
   </header>
   <?php
     include 'nav.php';
-    
+  
     echo '<main id="innerListView">';
       
     echo '<fieldset id="listsList"><legend>LISTS</legend>';  
