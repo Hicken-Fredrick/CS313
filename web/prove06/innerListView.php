@@ -60,7 +60,7 @@
     echo '<fieldset id="itemsList"><legend>ITEMS</legend>';
     foreach ($items as $item)
     {
-      echo '<form method="get">';
+      echo '<form action="" method="post">';
       echo 'ITEM: ' . $item['itemname'] . ' - $' . $item['itemcost'] . '<br/>';
       echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
       echo '<input type="hidden" value="' . $item[itemid] .'" name="id">';
