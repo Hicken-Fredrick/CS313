@@ -5,6 +5,8 @@
   session_start(); //start session
 
   $sublistid = $_GET['listid'];
+  $listName = $_GET['listName'];
+  $listDesc = $_GET['listDesc'];
 
   $query = 'SELECT * FROM wishlist.list WHERE userid= ' . $_SESSION['user'] . ' AND sublistid= ' . $sublistid;
   $stmt = $db->prepare($query);
