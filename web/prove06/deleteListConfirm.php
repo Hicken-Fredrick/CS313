@@ -32,6 +32,7 @@
   <header>
     <h1><?php echo strtoupper($listName); ?> LIST</h1>
     <h2><?php echo strtoupper($listDesc); ?></h2>
+    <br/>
     <h2>REVIEW DATA TO BE DELETED</h2>
   </header>
   <?php
