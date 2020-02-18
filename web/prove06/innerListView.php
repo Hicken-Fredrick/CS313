@@ -51,7 +51,7 @@
     echo '</fieldset>';
     echo '<div class="accordion"><p>ADD A NEW LIST? CLICK HERE</p></div>'; 
     echo '<div class="hide"><form id="listInsert" action="addInnerListDB.php" method="post">';
-    echo '<label for="listName">List Name:</label> <input type="text" id="listName" name="listName" required>';
+    echo '<label for="listName">List Name:</label> <input type="text" id="listName" name="listName">';
     echo '<label for="desc">List Description:</label> <input type="" id="desc" name="listDescription">';
     echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
     echo '<button id="listAdd">CREATE</button>';
@@ -65,12 +65,12 @@
       echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
       echo '<input type="hidden" value="' . $item[itemid] .'" name="id">';
       echo '<input type="hidden" value="' . $sublistid . '" name="listid">';
-      echo '<input type="submit" value="DELETE"></form>';
+      echo '<input type="submit" value="DELETE" class="delete"></form>';
     }
     echo '</fieldset>';
     echo '<div class="accordion"><p>ADD NEW ITEMS? CLICK HERE</p></div>'; 
     echo '<div class="hide"><form id="itemInsert" action="addItemDB.php" method="post">';
-    echo '<label for="itemName">Item Name:</label> <input type="text" id="itemName" name="itemName" required>';
+    echo '<label for="itemName">Item Name:</label> <input type="text" id="itemName" name="itemName">';
     echo '<label for="cost">Item Cost:</label> <input type="" id="cost" name="itemCost">';
     echo '<label for="loc">Item Location:</label> <input type="text" id="loc" name="itemLocation">';
     echo '<label for="info">Item Info:</label> <input type="text" id="info" name="itemInfo">';
@@ -82,5 +82,6 @@
   ?>
 <script src="showAdd.js"></script>
 <script src="AJAXAddCall.js"></script>
+<script src="AJAXDeleteCall.js"></script>
 </body>
 </html>

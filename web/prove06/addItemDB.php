@@ -30,11 +30,11 @@ $stmt->execute();
 
 $itemId = $db->lastInsertId('wishlist.item_itemid_seq');
 
-echo '<form method="get">';
+echo '<form action="deleteItemDB.php" method="post">';
 echo 'ITEM: ' . $name . ' - $' . $cost . '<br/>';
 echo 'INFO: ' . $loc . ' - ' . $info . '<br/>';
 echo '<input type="hidden" value="' . $itemId .'" name="id">';
 echo '<input type="hidden" value="' . $subListId .'" name="listid">';
-echo '<input type="submit" value="DELETE"></form>';
+echo '<input type="submit" value="DELETE" class="delete"></form>';
 
 ?>
