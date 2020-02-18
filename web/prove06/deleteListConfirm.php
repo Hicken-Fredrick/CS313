@@ -44,10 +44,7 @@
     {
       echo '<form action="innerListView.php" method="get">';
       echo 'LIST: ' . $subList['listname'] . ' - ' . $subList['listdescription'] . '<br/>';
-      echo '<input type="hidden" value="' . $subList[listid] .'" name="listid">';
-      echo '<input type="hidden" value="' . $subList['listname'] .'" name="listName">';
-      echo '<input type="hidden" value="' . $subList['listdescription'] .'" name="listDesc">';
-      echo '<input type="submit" value="Choose"></form>';
+      echo '</form>';
     }
     echo '</fieldset>';
   
@@ -57,9 +54,7 @@
       echo '<form method="get">';
       echo 'ITEM: ' . $item['itemname'] . ' - $' . $item['itemcost'] . '<br/>';
       echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
-      echo '<input type="hidden" value="' . $item[itemid] .'" name="id">';
-      echo '<input type="hidden" value="' . $sublistid . '" name="listid">';
-      echo '<input type="submit" value="DELETE"></form>';
+      echo '</form>';
     }
     echo '</fieldset>';
 
