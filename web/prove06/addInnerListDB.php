@@ -13,7 +13,7 @@ $stmt = $db->prepare('INSERT INTO wishlist.list (listname, listdescription, user
     VALUES (:name, :desc, :userId, :subId)');
 $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->bindValue(':desc', $desc, PDO::PARAM_STR);
-$stmt->bindValue(':userId', $id, PDO::PARAM_INT);
+$stmt->bindValue(':userId', $userId, PDO::PARAM_INT);
 $stmt->bindValue(':subId', $subListId, PDO::PARAM_INT);
 $stmt->execute();
 
