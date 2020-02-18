@@ -19,7 +19,7 @@ $stmt->execute();
 
 echo '<form action="innerListView.php" method="get">';
 echo 'LIST: ' . $name . ' - ' . $desc . '<br/>';
-echo '<input type="hidden" value="' . $subListId .'" name="listid">';
+echo '<input type="hidden" value="' . $subListId . '" name="listid">';
 echo '<input type="submit" value="Choose"></form>';
 
 ?>

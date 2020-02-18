@@ -62,7 +62,7 @@
       echo 'ITEM: ' . $item['itemname'] . ' - $' . $item['itemcost'] . '<br/>';
       echo 'INFO: ' . $item['itemlocation'] . ' - ' . $item['iteminfo'] . '<br/>';
       echo '<input type="hidden" value="' . $item[itemid] .'" name="id">';
-      echo '<input type="hidden" value="' . $sublistid .'" name="listid">';
+      echo '<input type="hidden" value="' . $sublistid . '" name="listid">';
       echo '<input type="submit" value="DELETE"></form>';
     }
     echo '</fieldset>';
