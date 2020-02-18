@@ -36,6 +36,13 @@
   <?php
     include 'nav.php';
   
+    if(isset($sublistid)) {
+    echo '<li><a href="deleteListConfirm.php?listid="' . $sublistid . '">DELETE LIST</a></li>';
+    }
+
+    echo '</ul>
+    </nav>';
+  
     echo '<main id="innerListView">';
       
     echo '<fieldset id="listsList"><legend>LISTS</legend>';  
