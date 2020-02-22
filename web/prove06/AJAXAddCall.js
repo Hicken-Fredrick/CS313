@@ -1,15 +1,13 @@
 $("#listAdd").click( function() {
   var data = $("#listInsert :input").serializeArray();
   $.post( $("#listInsert").attr("action"), data, function(info) { $("#listsList").append(info); });
-  cleanupList();
-  return false;
+  //cleanupList();
 });
 
 $("#itemAdd").click( function() {
   var data = $("#itemInsert :input").serializeArray();
   $.post( $("#itemInsert").attr("action"), data, function(info) { $("#itemsList").append(info); });
-  cleanupItem();
-  return false;
+  //cleanupItem();
 });
 
 $("#listInsert").submit( function() {
