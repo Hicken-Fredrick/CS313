@@ -101,7 +101,7 @@ main {
 main fieldset {
   background-color: #373434c7;
   border: 2px solid#656262;
-  box-shadow: 0 0 5px 5px #373737;
+  box-shadow: 0 0 5px 5px #3737378c;
 }
 form {
   margin: 10px; 
@@ -180,4 +180,16 @@ form {
   display: flex;
   border: none;
   width: 90%;
+  background: none;
+}
+#innerListView .hide form input {
+  background: #b1b8bb;
+  border: .5px dotted gray;
+}
+#innerListView fieldset form {
+  font-size: 19px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#innerListView fieldset form .delete {
+  font-size: 10px;
 }
