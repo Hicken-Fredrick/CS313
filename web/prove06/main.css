@@ -100,7 +100,7 @@ main {
 }
 main fieldset {
   background-color: #373434c7;
-  border: 2px solid#656262;
+  border: 2px solid #656262;
   box-shadow: 0 0 5px 5px #3737378c;
 }
 form {
@@ -130,9 +130,15 @@ form {
 
 /* chooseUse.php specifics */
 #chooseUser form {
-  border: 1px solid white;
+  border: .5px dotted darkgray;
   width: 450px;
-  padding: 5px;
+  padding: 10px;
+  background: #333;
+  font-size: 20px;
+}
+
+#chooseUser form input {
+    font-size: 12px;
 }
 
 #chooseUser form * {
@@ -175,6 +181,9 @@ form {
 #innerListView .hide {
   display: none;
   width: 100%;
+}
+#innerListView .vanish {
+    padding: 8px;
 }
 #innerListView .hide form {
   display: flex;
