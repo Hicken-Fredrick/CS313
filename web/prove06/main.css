@@ -208,3 +208,11 @@ form {
 #innerListView fieldset form .delete {
   font-size: 10px;
 }
+
+/* addList View specifics */
+#addList form {
+  background: #2c2c2c;
+  border: .5px dotted gray;
+  width: 450px;
+  padding: 5px;
+}

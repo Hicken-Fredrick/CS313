@@ -14,7 +14,7 @@
     <h1>ADD LIST</h1>
   </header>
   <?php include 'nav.php'; ?>
-  <main>
+  <main id="addList">
     <form action="addListDB.php" method="post">
 
       <p>List Name: <input type="text" name="listName" required><br/></p>
