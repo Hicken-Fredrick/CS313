@@ -31,7 +31,7 @@ $stmt->execute();
 $itemId = $db->lastInsertId('wishlist.item_itemid_seq');
 
 echo '<form action="deleteItemDB.php" method="post">';
-echo 'ITEM: ' . $name . ' - $' . $cost . '<br/>';
+echo 'ITEM: ' . $name . ' - $' . number_format((float)$cost, 2, '.', '') . '<br/>';
 echo 'INFO: ' . $loc . ' - ' . $info . '<br/>';
 echo '<input type="hidden" value="' . $itemId .'" name="id">';
 echo '<input type="hidden" value="' . $subListId .'" name="listid">';
