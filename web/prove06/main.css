@@ -154,7 +154,8 @@ form {
 
 /* innerListView.php specifics */
 #innerListView form {
-  border: 1px solid white;
+  background: #2c2c2c;
+  border: .5px dotted gray;
   width: 450px;
   padding: 5px;
 }
@@ -168,6 +169,7 @@ form {
   width: 80%;
   margin: 5px;
   margin-bottom: 15px;
+  background-color: #37343463;
 }
 
 #innerListView .hide {
