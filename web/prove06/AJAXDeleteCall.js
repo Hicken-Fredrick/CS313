@@ -1,5 +1,6 @@
 $(".delete").click( function() {
-  $(this).parent().remove();
+  var data = $($(this).parent()).serializeArray();
+  $.post( $(this).parent().attr("action"), data, function(info) { $(this).parent().remove(); });
 });
 
 $(".vanish").submit( function() {
