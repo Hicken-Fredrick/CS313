@@ -148,9 +148,15 @@ form {
 
 /* outerListView.php specifics */
 #outerListView form {
-  border: 1px solid white;
+  border: .5px dotted darkgray;
   width: 450px;
-  padding: 5px;
+  padding: 10px;
+  background: #333;
+  font-size: 20px;
+}
+
+#outerListView form input {
+    font-size: 12px;
 }
 
 #outerListView form * {
