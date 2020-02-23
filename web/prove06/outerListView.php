@@ -23,8 +23,8 @@
 </head>
 <body>
   <header>
-    <h1>CURRENT ACTIVE LISTS</h1>
-    <h2>These are your root lists, You can make any number of lists here or inside of a given list!</h2>
+    <h1>CURRENT ROOT LISTS</h1>
+    <h2>Use the Buttons Below to Create New Root Root Lists!</h2>
   </header>
   <?php
     include 'nav.php';

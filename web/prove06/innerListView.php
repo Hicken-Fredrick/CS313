@@ -71,7 +71,7 @@
     echo '<div class="accordion"><p>ADD NEW ITEMS? CLICK HERE</p></div>'; 
     echo '<div class="hide"><form id="itemInsert" action="addItemDB.php" method="post">';
     echo '<label for="itemName">Item Name:</label> <input type="text" id="itemName" name="itemName">';
-    echo '<label for="cost">Item Cost:</label> <input type="" id="cost" name="itemCost">';
+    echo '<label for="cost">Item Cost:</label> <input id="cost" name="itemCost" type="number" min="0.00" step="0.01">';
     echo '<label for="loc">Item Location:</label> <input type="text" id="loc" name="itemLocation">';
     echo '<label for="info">Item Info:</label> <input type="text" id="info" name="itemInfo">';
     echo '<input type="hidden" value="' . $sublistid .'" name="listid">';

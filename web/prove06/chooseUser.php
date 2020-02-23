@@ -22,7 +22,8 @@
 <body>
   <header>
     <h1>CHOOSE ACTIVE USER</h1>
-    <h2>If your a returning user and aren't showing, please check your spelling carefully</h2>
+    <h2>If you're a returning user and aren't showing up, please check your spelling carefully</h2>
+    <a href="login.php">Return To Login</a>
   </header>
   <div class="bar"></div>
   <main id="chooseUser">
