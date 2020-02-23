@@ -214,5 +214,8 @@ form {
   background: #2c2c2c;
   border: .5px dotted gray;
   width: 450px;
-  padding: 5px;
+  padding: 12px;
+}
+#addList form input {
+  margin: 8px;
 }

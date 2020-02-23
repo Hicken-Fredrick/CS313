@@ -18,9 +18,9 @@
     <form action="addListDB.php" method="post">
 
       <label for="listName">List Name:</label>
-      <input type="text" name="listName" value="LIST" required><br/>
+      <input type="text" name="listName" placeholder="LIST" required><br/>
       <label for="listDescription">List Description:</label>
-      <input type="text" name="listDescription" value="DESCRIPTION" required><br/>
+      <input type="text" name="listDescription" placeholder="DESCRIPTION" required><br/>
 
       <input type="submit" value="CREATE!">
     </form>
